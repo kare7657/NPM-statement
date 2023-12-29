@@ -1,0 +1,312 @@
+@import "./guideline";
+@import "./mixin";
+
+// 通用
+* {
+    @include all();
+}
+body.modal-open {
+    padding-right: 0px !important;
+    overflow-y: auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-right: 0 !important;
+    position: relative;
+    background-color: #f1eff0;
+    @include mobile-XS() {
+        font-size: 0.775rem;
+    }
+    @include navbar();
+    @include footer();
+    @include breadcrumb();
+    @include back-top();
+    @include form();
+    @include table();
+    @include searchbar();
+    @include datepicker();
+    /* 跳到主要內容區塊 */
+    .for_accessibility .go-main {
+        position: absolute;
+        top: 18px;
+        left: 16px;
+        z-index: 1000;
+        width: 1px;
+        height: 1px;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #fff;
+        border-radius: 4px;
+    }
+    .for_accessibility .go-main:focus {
+        width: auto;
+        height: auto;
+        padding: 6px;
+        background-color: $primary-dark;
+    }
+    .for_accessibility div {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background-color: transparent;
+        opacity: 0.1;
+    }
+    .bg-img {
+        position: fixed;
+        object-position: center center;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/bgimg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 30% center;
+        @include web-S {
+            width: 100%;
+            height: 100%;
+            background-position: 30% center;
+            background-image: url("../img/bgimg-1024.jpg");
+        }
+        @include mobile-L {
+            background-image: url("../img/bgimg-568.jpg");
+            // background-position: 100% center;
+        }
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        position: relative;
+        padding-top: calc(123px + 32px);
+        padding-bottom: $p-L;
+        min-height: 747px;
+        width: 100%;
+        @include web-XL {
+            min-height: unset;
+        }
+        @include pad {
+            padding-top: 80px;
+        }
+        @include mobile-L {
+            padding-top: 60px;
+            padding-bottom: $p-S;
+        }
+
+        .card {
+            background-color: white !important;
+            padding: $p-M $p-L;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba($color: black, $alpha: 0.1);
+            border: unset;
+            display: block;
+            @include pad {
+                padding: $p-S $p-M;
+            }
+            @include mobile-L {
+                padding: $p-S;
+            }
+        }
+        section {
+            width: 100%;
+        }
+        .brief-p {
+            margin-bottom: $m-S;
+        }
+        &.nomenu {
+            padding-top: calc(72px + 32px);
+            position: relative;
+            @include pad {
+                padding-top: 80px;
+            }
+        }
+        &.bgc {
+            background-color: $primary-table;
+        }
+        &.bgc-gray {
+            background-color: #eee;
+        }
+        &.fixpt {
+            padding-top: 24px;
+            @include mobile-L {
+                padding-top: 0;
+            }
+        }
+        &.main-clause {
+            padding: 0 $p-S;
+            padding-top: $p-XS;
+            @include mobile-L {
+                padding: 0;
+            }
+        }
+        .alert {
+            font-size: $size-h3;
+            text-align: center;
+            color: $primary-dark;
+            font-weight: bold;
+        }
+        ul.ps {
+            padding: $p-XS 0;
+            padding-left: $p-XS;
+            margin-bottom: 0;
+            li {
+                list-style-position: outside;
+                list-style-type: disc;
+                color: $primary-default;
+                line-height: 1.75;
+            }
+        }
+
+        //網站導覽
+        .content-webmap {
+            .container {
+                .list-gp {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: start;
+                    @include pad {
+                        justify-content: space-between;
+                    }
+                    .text-gp {
+                        width: 23%;
+                        margin-right: $m-S;
+                        margin-bottom: $m-S;
+                        @include web-S {
+                            width: 30%;
+                        }
+                        @include pad {
+                            width: 48%;
+                            margin-right: 0;
+                            margin-bottom: $p-XS;
+                        }
+                        @include mobile-L() {
+                            width: 100%;
+                            margin-right: 0;
+                            margin-bottom: $p-XS;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                        ul {
+                            padding: $p-XS;
+                            padding-top: $p-XXS;
+                            list-style: none;
+                            font-size: $size-p;
+                            margin: 0;
+                            margin-bottom: $m-S;
+                            line-height: 2;
+                            @include mobile-L() {
+                                margin-bottom: 0;
+                                padding-bottom: 0;
+                            }
+                            a {
+                                color: $primary-default;
+                            }
+                        }
+                        .title {
+                            display: block;
+                            font-weight: bold;
+                            font-size: $size-h5;
+                            color: $primary-dark;
+                            background-color: $primary-table;
+                            padding: $p-XXS $p-XS;
+                            margin: 0;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
+        // 一般
+        .content-normal {
+            ul:not(.nav, .breadcrumb) {
+                padding: 0;
+                margin-bottom: 0;
+                li:not(.nav-item) {
+                    line-height: 2;
+                    color: $text;
+                    list-style-position: inside;
+                }
+            }
+            h6 {
+                margin-bottom: $p-XXS;
+            }
+            h4 {
+                margin-bottom: $p-XXS;
+            }
+            h3,
+            h4,
+            h5 {
+                margin-top: $m-S;
+                margin-bottom: $p-XXS;
+            }
+        }
+        // Banner
+        .section-banner {
+            width: 100%;
+            max-width: 1140px;
+            margin: auto;
+            display: block !important;
+            background-color: white !important;
+            color: $text !important;
+            padding: 0;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+
+        //    首頁
+        .content-index {
+            .card {
+                margin-bottom: $m-S;
+                ul {
+                    margin-bottom: $m-XXS;
+                }
+                .btn {
+                    width: 100%;
+                    text-align: right;
+                    padding: 0;
+                }
+            }
+            .type-gp {
+                display: flex;
+                justify-content: space-between;
+                .card {
+                    width: 49%;
+                }
+            }
+        }
+        //註冊成功
+        .content-sign-up-success {
+            .container {
+                height: inherit;
+                text-align: center;
+                padding: $p-XL 0;
+                p {
+                    text-align: center;
+                    @include pad() {
+                        margin-top: $m-XS;
+                    }
+                }
+                img {
+                    width: 80px;
+                    margin-bottom: $m-XS;
+                }
+                h2 {
+                    margin-bottom: 0;
+                }
+                .btn {
+                    margin: $m-XS 0;
+                }
+            }
+        }
+    }
+}

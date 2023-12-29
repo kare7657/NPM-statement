@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free/js/all.min.js">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- 跳到主要內容區塊 -->
+    <div class="for_accessibility">
+        <a href="#AC" class="go-main" title="跳到主要內容區塊" tabindex="1">跳到主要內容區塊</a>
+    </div>
+    <!-- <img class="bg-img" src="img/bgimg.jpg" alt="底圖"> -->
+    <div class="bg-img"></div>
+    <nav class="navbar">
+        <div class="pc">
+            <div class="top">
+                <a href="index.html" class="logo" title="首頁">
+                    <img src="img/brand.gif" alt="logo">
+                    <h1>人民陳情列管案件管理平台</h1>
+                </a>
+                <div class="right">
+                    <a href="#U" id="AU" title="右上方功能區塊" accesskey="U">:::</a>
+                    <a href="webmap.html" class="icon-btn" title="網站導覽"><i class="fas fa-sitemap"></i></a>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="nav-gp">
+                    <div class="nav-function">
+                        <a href="case-manage.html" title="案件登錄" class="">
+                            案件登錄
+                        </a>
+                    </div>
+                    <div class="nav-function">
+                        <a href="regulation.html" title="案件查詢">
+                            案件查詢
+                        </a>
+                    </div>
+                    <div class="nav-function">
+                        <a href="operating-instruction.html" title="說明事項">
+                            說明事項
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="menu">
+                <div class="fas fa-bars">
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="tax-break.html" title="案件登錄">
+                            案件登錄
+                        </a></li>
+                    <li> <a href="separate-taxation.html" title="案件查詢">
+                            案件查詢
+                        </a></li>
+                    <li><a href="member.html" title="說明事項">說明事項</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <img src="img/brand.gif" alt="logo">
+                <a href="index.html" title="首頁">
+                    <h1 class="title">人民陳情列管案件管理平台</h1>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- mobile-menu -->
+    <script>
+        var fas = document.querySelector(".fas.fa-bars")
+        var navbar_nav = document.querySelector(".nav.navbar-nav")
+        var nav_item = document.querySelector(".nav-item.dropdown")
+        fas.onclick = function () {
+            if (navbar_nav.classList.contains("active-ul")) {
+                navbar_nav.classList.remove("active-ul")
+            } else {
+                navbar_nav.classList.add("active-ul")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

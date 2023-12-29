@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>人民陳情列管案件管理平台</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- swiper輪播 -->
+    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body class="bg-img">
+    <!-- navbar -->
+    <header id="header"></header>
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <section class="content-index container">
+            <div class="card">
+                <h2>說明事項</h2>
+                <ul>
+                    <li>為加速案件處理速度,請務必以一件E-mail 反映一件事情。若有二件以上之事情，請分別立案</li>
+                    <li>陳情事項請簡潔明確表達，並以真實案件為限，與本院無關之建議、情緒批評、惡意攻擊、謾罵等，恕不服務</li>
+                    <li>經查證所留姓名或住址、聯絡電話、電子郵件位址屬偽冒、匿名虛報不實者，本院得不予處理</li>
+                    <li>案件送出後，請盡速至個人信箱點選確認信。倘未點選確認信，本院將無法收件</li>
+                </ul>
+                <div class="btn">
+                    <button type="button">更多</button>
+                </div>
+            </div>
+            <div class="type-gp">
+                <div class="card"></div>
+            <div class="card"></div>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper輪播 -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            // loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
+        });
+    </script>
+
+</body>
+
+</html>
