@@ -47,7 +47,7 @@
         max-width: 1440px;
         margin: auto;
         padding: $p-S 0;
-        padding-bottom: 0;
+        // padding-bottom: 0;
         @include web-XL {
             max-width: 1280px;
         }
@@ -166,31 +166,32 @@
     #AC {
         position: absolute;
         left: 7%;
+        top: 135px;
         font-size: $size-h5;
         color: $bk-20;
         margin: 0 $m-XS;
         color: transparent;
         &:focus {
             color: $primary-tint;
-            &::after {
-                content: ":::";
-            }
+            // &::after {
+            //     content: ":::";
+            // }
         }
         @include web-L() {
             left: -10px;
         }
     }
     #AZ {
+        position: absolute;
+        left: 0;
         &:focus {
-            position: absolute;
-            left: 0;
             font-size: $size-h5;
             color: $bk-20;
             margin: 0 $m-XS;
             color: white;
-            &::after {
-                content: ":::";
-            }
+            // &::after {
+            //     content: ":::";
+            // }
         }
     }
     .clearfix {
@@ -1598,9 +1599,9 @@
                         margin-bottom: $m-XS;
                         a {
                             margin-right: $m-XS;
-                            border-bottom: solid 1px $bk-20;
+                            border-bottom: solid 1px #ddd1aa;
                             display: inline-block;
-                            color: $bk-20;
+                            color: #ddd1aa;
                         }
                     }
                     p,
@@ -1794,14 +1795,15 @@
             padding: $m-XXS 0;
         }
         @include mobile-L() {
-            padding: $p-XXS 0;
+            padding: $p-XXS $p-XS;
+            background-color: $primary-table;
         }
         .container {
             padding: 0;
             @include mobile-L() {
                 width: 100%;
                 margin: 0;
-                padding: 0 20px;
+                padding: 0;
             }
             ul {
                 padding: 0;

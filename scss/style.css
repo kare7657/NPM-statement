@@ -9,7 +9,6 @@
   max-width: 1440px;
   margin: auto;
   padding: 24px 0;
-  padding-bottom: 0;
 }
 @media (max-width: 1550px) {
   * .container {
@@ -136,6 +135,7 @@
 * #AC {
   position: absolute;
   left: 7%;
+  top: 135px;
   font-size: 1.25rem;
   color: #dcdddd;
   margin: 0 12px;
@@ -144,24 +144,20 @@
 * #AC:focus {
   color: #BE5555;
 }
-* #AC:focus::after {
-  content: ":::";
-}
 @media (max-width: 1367px) {
   * #AC {
     left: -10px;
   }
 }
-* #AZ:focus {
+* #AZ {
   position: absolute;
   left: 0;
+}
+* #AZ:focus {
   font-size: 1.25rem;
   color: #dcdddd;
   margin: 0 12px;
   color: white;
-}
-* #AZ:focus::after {
-  content: ":::";
 }
 * .clearfix {
   clear: both;
@@ -1643,9 +1639,9 @@ body .footer .container .contact .block .link-gp {
 }
 body .footer .container .contact .block .link-gp a {
   margin-right: 12px;
-  border-bottom: solid 1px #dcdddd;
+  border-bottom: solid 1px #ddd1aa;
   display: inline-block;
-  color: #dcdddd;
+  color: #ddd1aa;
 }
 body .footer .container .contact .block p,
 body .footer .container .contact .block a {
@@ -1697,7 +1693,8 @@ body .breadcrumb {
 }
 @media (max-width: 568px) {
   body .breadcrumb {
-    padding: 8px 0;
+    padding: 8px 16px;
+    background-color: #FFF9F9;
   }
 }
 body .breadcrumb .container {
@@ -1707,7 +1704,7 @@ body .breadcrumb .container {
   body .breadcrumb .container {
     width: 100%;
     margin: 0;
-    padding: 0 20px;
+    padding: 0;
   }
 }
 body .breadcrumb .container ul {
@@ -3029,13 +3026,21 @@ body main .content-webmap .container .list-gp .text-gp .title {
   border-radius: 4px;
 }
 body main .content-normal ul:not(.nav, .breadcrumb) {
-  padding: 0;
-  margin-bottom: 0;
+  padding-left: 1.25rem;
 }
 body main .content-normal ul:not(.nav, .breadcrumb) li:not(.nav-item) {
   line-height: 2;
   color: #666666;
+  list-style-position: outside;
+}
+body main .content-normal ol {
+  padding: 0;
+}
+body main .content-normal ol li {
+  line-height: 2;
+  color: #666666;
   list-style-position: inside;
+  padding: 0;
 }
 body main .content-normal h6 {
   margin-bottom: 8px;
@@ -3048,6 +3053,14 @@ body main .content-normal h4,
 body main .content-normal h5 {
   margin-top: 20px;
   margin-bottom: 8px;
+}
+body main .content-normal h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+body main .content-normal .title {
+  font-weight: bold;
+  color: black;
 }
 body main .section-banner {
   width: 100%;
@@ -3067,7 +3080,7 @@ body main .section-banner img {
      object-position: center center;
 }
 body main .content-index .card {
-  margin-bottom: 20px;
+  margin-bottom: 48px;
 }
 body main .content-index .card ul {
   margin-bottom: 4px;
@@ -3082,7 +3095,36 @@ body main .content-index .type-gp {
   justify-content: space-between;
 }
 body main .content-index .type-gp .card {
-  width: 49%;
+  width: 48%;
+  display: flex;
+  flex-direction: row;
+  padding: 52px 40px;
+  margin-bottom: 0;
+}
+body main .content-index .type-gp .card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 12px;
+}
+body main .content-index .type-gp .card .left {
+  width: 40%;
+  text-align: center;
+  border-right: solid 1px #dcdddd;
+  padding-right: 24px;
+}
+body main .content-index .type-gp .card .right {
+  width: 60%;
+  padding: 32px;
+  padding-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .content-index .type-gp .card .right p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.75;
+  text-align: left;
 }
 body main .content-sign-up-success .container {
   height: inherit;

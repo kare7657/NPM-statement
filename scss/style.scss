@@ -225,12 +225,23 @@ body {
         // 一般
         .content-normal {
             ul:not(.nav, .breadcrumb) {
-                padding: 0;
-                margin-bottom: 0;
+                padding-left: $size-h5;
                 li:not(.nav-item) {
                     line-height: 2;
                     color: $text;
+                    list-style-position: outside;
+                }
+            }
+            ol {
+                padding: 0;
+                // &:last-of-type{
+                //     margin-bottom: 0;
+                // }
+                li {
+                    line-height: 2;
+                    color: $text;
                     list-style-position: inside;
+                    padding: 0;
                 }
             }
             h6 {
@@ -244,6 +255,14 @@ body {
             h5 {
                 margin-top: $m-S;
                 margin-bottom: $p-XXS;
+            }
+            h2 {
+                text-align: center;
+                margin-bottom: $p-S;
+            }
+            .title {
+                font-weight: bold;
+                color: black;
             }
         }
         // Banner
@@ -266,7 +285,7 @@ body {
         //    首頁
         .content-index {
             .card {
-                margin-bottom: $m-S;
+                margin-bottom: $m-L;
                 ul {
                     margin-bottom: $m-XXS;
                 }
@@ -280,7 +299,36 @@ body {
                 display: flex;
                 justify-content: space-between;
                 .card {
-                    width: 49%;
+                    width: 48%;
+                    display: flex;
+                    flex-direction: row;
+                    padding: $m-XL $p-L;
+                    margin-bottom: 0;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        margin-bottom: $m-XS;
+                    }
+                    .left {
+                        width: 40%;
+                        text-align: center;
+                        border-right: solid 1px $bk-20;
+                        padding-right: $p-S;
+                    }
+                    .right {
+                        width: 60%;
+                        padding: $p-M;
+                        padding-left: $p-L;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p {
+                            font-size: $size-h5;
+                            font-weight: bold;
+                            line-height: 1.75;
+                            text-align: left;
+                        }
+                    }
                 }
             }
         }
