@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>人民陳情列管案件管理平台</title>
+    <title>說明事項-人民陳情列管案件管理平台</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -20,38 +20,35 @@
     <header id="header"></header>
     <main>
         <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
-        <section class="content-index container">
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><span>說明事項</span></li>
+                </ul>
+            </div>
+        </div>
+        <section class="content-normal container">
+            <h2>說明事項</h2>
             <div class="card">
-                <h2>說明事項</h2>
                 <ul>
                     <li>為加速案件處理速度，請務必以一件E-mail 反映一件事情。若有二件以上之事情，請分別立案</li>
                     <li>陳情事項請簡潔明確表達，並以真實案件為限，與本院無關之建議、情緒批評、惡意攻擊、謾罵等，恕不服務</li>
                     <li>經查證所留姓名或住址、聯絡電話、電子郵件位址屬偽冒、匿名虛報不實者，本院得不予處理</li>
                     <li>案件送出後，請盡速至個人信箱點選確認信。倘未點選確認信，本院將無法收件</li>
                 </ul>
-                <div class="btn">
-                    <button type="button" onclick="location.href='description.html'">更多</button>
-                </div>
-            </div>
-            <div class="type-gp">
-                <div class="card">
-                    <div class="left">
-                        <img src="img/icon-apply.png" alt="案件申請icon">
-                        <h2>案件登錄</h2>
-                    </div>
-                    <div class="right">
-                        <p>填寫想對故宮博物院陳情的案件內容，需留下聯絡資訊</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="left">
-                        <img src="img/icon-search.png" alt="案件查詢icon">
-                        <h2>案件查詢</h2>
-                    </div>
-                    <div class="right">
-                        <p>輸入案件編號及 Email，查詢已申請案件的處理進度</p>
-                    </div>
-                </div>
+                <h3>處理流程</h3>
+                <ol>
+                    <li>民眾填寫案件內容及聯絡資料</li>
+                    <li>系統寄發驗證信至 Email</li>
+                    <li>請收到驗證信後3小時內點選確認連結</li>
+                    <li>本院收發單位收件</li>
+                    <li>依業務屬性分發至各業務單位</li>
+                    <li>各業務單位處理及回覆</li>
+                    <li>可至「案件查詢」查詢處理進度</li>
+                </ol>
             </div>
         </section>
 
@@ -72,6 +69,7 @@
             $("#footer").load("footer.html");
         });
     </script>
+
 
 </body>
 

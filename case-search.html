@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>案件查詢-人民陳情列管案件管理平台</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body class="bg-img">
+    <!-- navbar -->
+    <header id="header"></header>
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><span>案件查詢</span></li>
+                </ul>
+            </div>
+        </div>
+        <section class="content-apply container">
+            <h2>案件查詢</h2>
+            <div class="card">
+                <form>
+                    <ul>
+                        <li>請輸入以下建立案件時所設定的相關資訊，以供資料調閱及查詢辦理情形，謝謝!!</li>
+                    </ul>
+                    <!-- <div class="form-gp">
+                        <label for="email">Email<span class="notice">*</span></label>
+                        <input type="email" name="email" id="email" placeholder="請輸入Email">
+                    </div>
+                    <div class="form-gp">
+                        <label for="case-number">案件編號<span class="notice">*</span></label>
+                        <input type="text" name="case-number" id="case-number" placeholder="請輸入您申請的案件編號">
+                    </div>
+                    <div class="code-gp">
+                        <label for="code">驗證碼<span class="notice">*</span></label>
+                        <div class="text-gp">
+                            <input class="code" type="text" name="code" id="code2">
+                            <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                            <button name="reform" id="reform2" class="reform" onclick="" title="重新整理"
+                                type="button"><i class="fas fa-sync-alt"></i></button>
+                            <button name="audio" id="btn_Voice2" class="btnPlayAudio" onclick="PlayVoice();"
+                                title="播放驗證碼語音" type="button"><i class="fas fa-volume-up"></i></button>
+                        </div>
+                    </div> -->
+
+                    <div class="btn-tool">
+                        <input type="submit" value="送出申請" class="submit">
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+    <!-- header active -->
+    <script>
+        window.onload = function () {
+            document.getElementById('menu2').className += " active";
+        }
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     document.getElementById('menu2').className += " active";
+        // });
+    </script>
+
+
+</body>
+
+</html>

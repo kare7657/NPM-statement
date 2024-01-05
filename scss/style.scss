@@ -29,8 +29,6 @@ body {
     @include back-top();
     @include form();
     @include table();
-    @include searchbar();
-    @include datepicker();
     /* 跳到主要內容區塊 */
     .for_accessibility .go-main {
         position: absolute;
@@ -75,7 +73,12 @@ body {
         }
         @include mobile-L {
             background-image: url("../img/bgimg-568.jpg");
-            // background-position: 100% center;
+        }
+    }
+    &.no-bg {
+        .bg-img {
+            background-image: initial;
+            background-color: white;
         }
     }
     main {
@@ -115,52 +118,17 @@ body {
         section {
             width: 100%;
         }
-        .brief-p {
-            margin-bottom: $m-S;
-        }
-        &.nomenu {
-            padding-top: calc(72px + 32px);
-            position: relative;
-            @include pad {
-                padding-top: 80px;
-            }
-        }
-        &.bgc {
-            background-color: $primary-table;
-        }
-        &.bgc-gray {
-            background-color: #eee;
-        }
-        &.fixpt {
-            padding-top: 24px;
-            @include mobile-L {
-                padding-top: 0;
-            }
-        }
-        &.main-clause {
-            padding: 0 $p-S;
-            padding-top: $p-XS;
-            @include mobile-L {
-                padding: 0;
-            }
-        }
-        .alert {
-            font-size: $size-h3;
-            text-align: center;
-            color: $primary-dark;
-            font-weight: bold;
-        }
-        ul.ps {
-            padding: $p-XS 0;
-            padding-left: $p-XS;
-            margin-bottom: 0;
-            li {
-                list-style-position: outside;
-                list-style-type: disc;
-                color: $primary-default;
-                line-height: 1.75;
-            }
-        }
+        // ul.ps {
+        //     padding: $p-XS 0;
+        //     padding-left: $p-XS;
+        //     margin-bottom: 0;
+        //     li {
+        //         list-style-position: outside;
+        //         list-style-type: disc;
+        //         color: $primary-default;
+        //         line-height: 1.75;
+        //     }
+        // }
 
         //網站導覽
         .content-webmap {
@@ -234,21 +202,12 @@ body {
             }
             ol {
                 padding: 0;
-                // &:last-of-type{
-                //     margin-bottom: 0;
-                // }
                 li {
                     line-height: 2;
                     color: $text;
                     list-style-position: inside;
                     padding: 0;
                 }
-            }
-            h6 {
-                margin-bottom: $p-XXS;
-            }
-            h4 {
-                margin-bottom: $p-XXS;
             }
             h3,
             h4,
@@ -265,27 +224,20 @@ body {
                 color: black;
             }
         }
-        // Banner
-        .section-banner {
-            width: 100%;
-            max-width: 1140px;
-            margin: auto;
-            display: block !important;
-            background-color: white !important;
-            color: $text !important;
-            padding: 0;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center center;
-            }
-        }
 
-        //    首頁
+        //首頁
         .content-index {
+            @include pad {
+                padding-bottom: 0;
+            }
             .card {
                 margin-bottom: $m-L;
+                @include pad {
+                    margin-bottom: $m-M;
+                }
+                @include mobile-L {
+                    margin-bottom: $m-S;
+                }
                 ul {
                     margin-bottom: $m-XXS;
                 }
@@ -293,27 +245,77 @@ body {
                     width: 100%;
                     text-align: right;
                     padding: 0;
+                    @include pad {
+                        padding-top: $p-XXS;
+                    }
+                    button {
+                        @include mobile-L {
+                            width: 100%;
+                        }
+                    }
                 }
             }
             .type-gp {
                 display: flex;
                 justify-content: space-between;
+                @include mobile-L {
+                    flex-wrap: wrap;
+                }
                 .card {
                     width: 48%;
                     display: flex;
                     flex-direction: row;
                     padding: $m-XL $p-L;
                     margin-bottom: 0;
+                    @include web-L {
+                        padding: $p-L;
+                    }
+                    @include pad {
+                        flex-wrap: wrap;
+                        width: 47.5%;
+                    }
+                    @include mobile-L {
+                        width: 100%;
+                        margin-bottom: $m-S;
+                        padding: $p-S;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
                     img {
                         width: 100px;
                         height: 100px;
                         margin-bottom: $m-XS;
+                        @include web-L {
+                            width: 80px;
+                            height: 80px;
+                        }
+                        @include pad {
+                            width: 60px;
+                            height: 60px;
+                        }
                     }
                     .left {
                         width: 40%;
-                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
                         border-right: solid 1px $bk-20;
                         padding-right: $p-S;
+                        @include pad {
+                            width: 100%;
+                            border: none;
+                            border-bottom: solid 1px $bk-20;
+                            padding-right: 0;
+                            padding-bottom: $p-XS;
+                        }
+                        h2 {
+                            margin-bottom: 0;
+                            @include mobile-L {
+                                font-size: $size-h3;
+                            }
+                        }
                     }
                     .right {
                         width: 60%;
@@ -322,26 +324,91 @@ body {
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        @include web-L {
+                            padding: $p-XS $p-M;
+                            padding-right: 0;
+                        }
+                        @include pad {
+                            width: 100%;
+                            padding: 0;
+                            padding-top: $p-XS;
+                        }
                         p {
                             font-size: $size-h5;
                             font-weight: bold;
                             line-height: 1.75;
                             text-align: left;
+                            @include mobile-L {
+                                font-size: $size-h5;
+                            }
+                            @include mobile-XS {
+                                font-size: $size-p;
+                            }
                         }
                     }
                 }
             }
         }
-        //註冊成功
-        .content-sign-up-success {
+        // 案件登錄
+        .content-apply {
+            max-width: 1440px;
+            margin: auto;
+            padding: $p-S 0;
+            @include web-XL {
+                max-width: 1280px;
+            }
+            @include web-L {
+                max-width: 1140px;
+            }
+            @include mobile-L {
+                padding-top: 0;
+            }
+            h2 {
+                text-align: center;
+                margin-bottom: $p-S;
+            }
+            &.container {
+                @include pad {
+                    padding-top: 0;
+                }
+            }
+            .card {
+                padding: $p-L 0;
+                @include pad {
+                    padding: $p-M;
+                }
+                @include mobile-L {
+                    padding: $p-S;
+                }
+                form {
+                    max-width: 800px;
+                    padding-bottom: $p-S;
+                    @include mobile-L {
+                        padding-bottom: 0;
+                    }
+                    ul {
+                        margin-bottom: $m-S;
+                        li {
+                            @include mobile-L {
+                                text-align: justify;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //登錄成功
+        .content-apply-success {
             .container {
                 height: inherit;
                 text-align: center;
                 padding: $p-XL 0;
                 p {
+                    margin-top: $m-XXS;
                     text-align: center;
-                    @include pad() {
-                        margin-top: $m-XS;
+                    @include mobile-L {
+                        padding: 0 $p-S;
+                        text-align: justify;
                     }
                 }
                 img {
@@ -349,10 +416,10 @@ body {
                     margin-bottom: $m-XS;
                 }
                 h2 {
-                    margin-bottom: 0;
+                    margin-bottom: $m-XS;
                 }
                 .btn {
-                    margin: $m-XS 0;
+                    margin-top: $m-S;
                 }
             }
         }
