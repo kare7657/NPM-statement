@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>網站導覽</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main class="nomenu fixpt">
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                    <li>></li>
+                    <li><span>網站導覽</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-webmap container">
+            <h2>網站導覽</h2>
+            <div class="card">
+                <!-- 導覽說明 -->
+                <p>
+                    本網站依無障礙網頁設計原則建置，網站的主要內容分為三大區塊：<br>
+                    1. 上方功能區塊、2. 中央內容區塊、3.下方功能區塊
+                </p>
+                <br>
+                <p>
+                    本網站的快速鍵﹝Accesskey﹞設定如下： <br>
+                    <span>Alt+U</span>：右上方功能區塊，包括回首頁、網站導覽、網站搜尋、字體選擇等。<br>
+                    <span>Alt+C</span>：中央內容區塊，為本頁主要內容區。<br>
+                    <span>Alt+Z</span>：下方功能區塊 <br>
+                    ※如果您的瀏覽器是Firefox，快速鍵的使用方法是<span>Shift+Alt+(快速鍵字母)</span>，例如<span>Shift+Alt+(快速鍵字母)</span>會跳至網頁中央區塊，以此類推。
+                </p>
+                <br>
+                <p>※當本網站項目頁籤無法以滑鼠點選時，您可利用以下鍵盤操作方式瀏覽資料 <br>
+                    <span>← →</span> or <span>↑↓</span>：按左右鍵或上下鍵移動標籤順序。<br>
+                    <span>Home</span> or <span>End→</span>：可直接跳至標籤第一項或者最後一項。<br>
+                    <span>Tab</span>：停留於該標籤後,可利用Tab鍵跳至內容瀏覽該筆資料，遇到radio按鈕時請配合使← → or↑↓鍵移動項目順序。<br>
+                    <span>Tab + Shift</span>：跳至上一筆資料；當跳回至標籤項目時您可繼續利用← → or↑↓鍵移動標籤順序。
+                </p>
+
+                <!-- 導覽清單 -->
+                <div class="list-gp">
+                    <div class="text-gp">
+                        <a href="case-apply.html" class="title" title="案件登錄">
+                            案件登錄
+                        </a>
+                    </div>
+                    <div class="text-gp">
+                        <a href="case-search.html" class="title" title="案件查詢">
+                            案件查詢
+                        </a>
+                    </div>
+                    <div class="text-gp">
+                        <a href="description.html" class="title" title="說明事項">
+                            說明事項</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+
+</html>

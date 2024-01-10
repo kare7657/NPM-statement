@@ -118,74 +118,69 @@ body {
         section {
             width: 100%;
         }
-        // ul.ps {
-        //     padding: $p-XS 0;
-        //     padding-left: $p-XS;
-        //     margin-bottom: 0;
-        //     li {
-        //         list-style-position: outside;
-        //         list-style-type: disc;
-        //         color: $primary-default;
-        //         line-height: 1.75;
-        //     }
-        // }
 
         //網站導覽
         .content-webmap {
-            .container {
-                .list-gp {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: start;
-                    @include pad {
-                        justify-content: space-between;
+            h2 {
+                text-align: center;
+                margin-bottom: $p-S;
+            }
+            .list-gp {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: start;
+                margin-top: $m-M;
+                @include pad {
+                    justify-content: space-between;
+                }
+                @include mobile-L {
+                    margin-bottom: $m-S;
+                }
+                .text-gp {
+                    width: 23%;
+                    margin-right: $m-S;
+                    margin-bottom: $m-S;
+                    @include web-S {
+                        width: 30%;
                     }
-                    .text-gp {
-                        width: 23%;
-                        margin-right: $m-S;
+                    @include pad {
+                        width: 48%;
+                        margin-right: 0;
+                        margin-bottom: $p-XS;
+                    }
+                    @include mobile-L() {
+                        width: 100%;
+                        margin-right: 0;
+                        margin-bottom: $p-XS;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                    ul {
+                        padding: $p-XS;
+                        padding-top: $p-XXS;
+                        list-style: none;
+                        font-size: $size-p;
+                        margin: 0;
                         margin-bottom: $m-S;
-                        @include web-S {
-                            width: 30%;
-                        }
-                        @include pad {
-                            width: 48%;
-                            margin-right: 0;
-                            margin-bottom: $p-XS;
-                        }
+                        line-height: 2;
                         @include mobile-L() {
-                            width: 100%;
-                            margin-right: 0;
-                            margin-bottom: $p-XS;
-                            &:last-child {
-                                margin-bottom: 0;
-                            }
+                            margin-bottom: 0;
+                            padding-bottom: 0;
                         }
-                        ul {
-                            padding: $p-XS;
-                            padding-top: $p-XXS;
-                            list-style: none;
-                            font-size: $size-p;
-                            margin: 0;
-                            margin-bottom: $m-S;
-                            line-height: 2;
-                            @include mobile-L() {
-                                margin-bottom: 0;
-                                padding-bottom: 0;
-                            }
-                            a {
-                                color: $primary-default;
-                            }
+                        a {
+                            color: $primary-default;
                         }
-                        .title {
-                            display: block;
-                            font-weight: bold;
-                            font-size: $size-h5;
-                            color: $primary-dark;
-                            background-color: $primary-table;
-                            padding: $p-XXS $p-XS;
-                            margin: 0;
-                            border-radius: 4px;
-                        }
+                    }
+                    .title {
+                        display: block;
+                        font-weight: bold;
+                        font-size: $size-h5;
+                        color: $primary-dark;
+                        background-color: $primary-table;
+                        padding: $p-XXS $p-XS;
+                        margin: 0;
+                        border-radius: 4px;
                     }
                 }
             }
@@ -375,7 +370,7 @@ body {
             .card {
                 padding: $p-L 0;
                 @include pad {
-                    padding: $p-M;
+                    padding: $p-M $p-XL;
                 }
                 @include mobile-L {
                     padding: $p-S;
@@ -456,8 +451,14 @@ body {
                     }
                     table.reply {
                         margin-bottom: $m-XL;
+                        @include mobile-L {
+                            margin-bottom: $m-L;
+                        }
                         &:last-child {
                             margin-bottom: 0;
+                            @include mobile-L {
+                                margin-bottom: $m-XS;
+                            }
                         }
                         thead {
                             th:first-child {

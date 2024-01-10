@@ -139,8 +139,8 @@
 }
 * #AC {
   position: absolute;
-  left: 7%;
-  top: 135px;
+  left: 5%;
+  top: 150px;
   font-size: 1.25rem;
   color: #dcdddd;
   margin: 0 12px;
@@ -2309,44 +2309,54 @@ body main .card {
 body main section {
   width: 100%;
 }
-body main .content-webmap .container .list-gp {
+body main .content-webmap h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+body main .content-webmap .list-gp {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
+  margin-top: 36px;
 }
 @media (max-width: 768px) {
-  body main .content-webmap .container .list-gp {
+  body main .content-webmap .list-gp {
     justify-content: space-between;
   }
 }
-body main .content-webmap .container .list-gp .text-gp {
+@media (max-width: 568px) {
+  body main .content-webmap .list-gp {
+    margin-bottom: 20px;
+  }
+}
+body main .content-webmap .list-gp .text-gp {
   width: 23%;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 @media (max-width: 1024px) {
-  body main .content-webmap .container .list-gp .text-gp {
+  body main .content-webmap .list-gp .text-gp {
     width: 30%;
   }
 }
 @media (max-width: 768px) {
-  body main .content-webmap .container .list-gp .text-gp {
+  body main .content-webmap .list-gp .text-gp {
     width: 48%;
     margin-right: 0;
     margin-bottom: 16px;
   }
 }
 @media (max-width: 568px) {
-  body main .content-webmap .container .list-gp .text-gp {
+  body main .content-webmap .list-gp .text-gp {
     width: 100%;
     margin-right: 0;
     margin-bottom: 16px;
   }
-  body main .content-webmap .container .list-gp .text-gp:last-child {
+  body main .content-webmap .list-gp .text-gp:last-child {
     margin-bottom: 0;
   }
 }
-body main .content-webmap .container .list-gp .text-gp ul {
+body main .content-webmap .list-gp .text-gp ul {
   padding: 16px;
   padding-top: 8px;
   list-style: none;
@@ -2356,15 +2366,15 @@ body main .content-webmap .container .list-gp .text-gp ul {
   line-height: 2;
 }
 @media (max-width: 568px) {
-  body main .content-webmap .container .list-gp .text-gp ul {
+  body main .content-webmap .list-gp .text-gp ul {
     margin-bottom: 0;
     padding-bottom: 0;
   }
 }
-body main .content-webmap .container .list-gp .text-gp ul a {
+body main .content-webmap .list-gp .text-gp ul a {
   color: #7D0000;
 }
-body main .content-webmap .container .list-gp .text-gp .title {
+body main .content-webmap .list-gp .text-gp .title {
   display: block;
   font-weight: bold;
   font-size: 1.25rem;
@@ -2592,7 +2602,7 @@ body main .content-apply .card {
 }
 @media (max-width: 768px) {
   body main .content-apply .card {
-    padding: 32px;
+    padding: 32px 56px;
   }
 }
 @media (max-width: 568px) {
@@ -2682,8 +2692,18 @@ body main .content-apply .card .form-view h3 {
 body main .content-apply .card .form-view table.reply {
   margin-bottom: 52px;
 }
+@media (max-width: 568px) {
+  body main .content-apply .card .form-view table.reply {
+    margin-bottom: 48px;
+  }
+}
 body main .content-apply .card .form-view table.reply:last-child {
   margin-bottom: 0;
+}
+@media (max-width: 568px) {
+  body main .content-apply .card .form-view table.reply:last-child {
+    margin-bottom: 12px;
+  }
 }
 @media (max-width: 568px) {
   body main .content-apply .card .form-view table.reply thead th:first-child {

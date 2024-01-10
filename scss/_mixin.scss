@@ -168,8 +168,8 @@
     }
     #AC {
         position: absolute;
-        left: 7%;
-        top: 135px;
+        left: 5%;
+        top: 150px;
         font-size: $size-h5;
         color: $bk-20;
         margin: 0 $m-XS;
@@ -402,30 +402,6 @@
             }
         }
     }
-    // .date-icon::after {
-    //     font-family: "Font Awesome 5 Free";
-    //     content: "\f073";
-    //     color: $complementary;
-    //     width: 12px !important;
-    //     position: absolute;
-    //     right: 16px;
-    //     top: calc(50% - 12px);
-    //     @include mobile-L() {
-    //         top: calc(50% - 10px);
-    //     }
-    // }
-    // .time-icon::after {
-    //     font-family: "Font Awesome 5 Free";
-    //     content: "\f017";
-    //     color: $complementary;
-    //     width: 12px;
-    //     position: absolute;
-    //     right: 16px;
-    //     top: calc(50% - 12px);
-    //     @include mobile-L() {
-    //         top: calc(50% - 10px);
-    //     }
-    // }
     //按鈕
     button {
         height: 40px;
@@ -1697,7 +1673,6 @@
                 }
                 .button-outline {
                     &.active {
-                        // background-color: $primary-bg !important;
                         color: $primary-dark !important;
                     }
                 }
@@ -1735,7 +1710,6 @@
                 input[type="radio"]:checked + label,
                 input[type="checkbox"]:checked + label {
                     color: white;
-                    // background-color: $primary-bg;
                     color: $primary-dark;
                 }
             }
@@ -2038,7 +2012,7 @@
                 word-break: break-all;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                padding:  $p-XS;
+                padding: $p-XS;
                 @include mobile-L {
                     flex-wrap: wrap;
                     text-align: left;
