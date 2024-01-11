@@ -93,10 +93,18 @@ body {
         @include web-XL {
             min-height: unset;
         }
+        @include web-L {
+            min-height: 79vh;
+        }
+        @include web-S {
+            min-height: 84vh;
+        }
         @include pad {
             padding-top: 80px;
+            min-height: 78vh;
         }
         @include mobile-L {
+            min-height: unset;
             padding-top: 60px;
             padding-bottom: $p-S;
         }
@@ -485,6 +493,9 @@ body {
                 p {
                     margin-top: $m-XXS;
                     text-align: center;
+                    @include pad{
+                        padding: 0 $p-2L;
+                    }
                     @include mobile-L {
                         padding: 0 $p-S;
                         text-align: justify;
