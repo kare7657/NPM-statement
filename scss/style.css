@@ -257,7 +257,7 @@
 * input[type=button] {
   border: none;
   color: white;
-  border: solid 1px #4A2121;
+  background-color: #4A2121;
   font-size: 1.25rem;
   font-weight: bold;
   border-radius: 4px;
@@ -2733,7 +2733,6 @@ body main .content-apply-success .container {
   padding: 56px 0;
 }
 body main .content-apply-success .container p {
-  margin-top: 4px;
   text-align: center;
 }
 @media (max-width: 768px) {
@@ -2752,8 +2751,32 @@ body main .content-apply-success .container img {
   margin-bottom: 12px;
 }
 body main .content-apply-success .container h2 {
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 body main .content-apply-success .container .btn {
   margin-top: 20px;
+}
+body main .content-apply-success .container form {
+  max-width: 400px;
+  margin-top: 20px;
+}
+body main .content-apply-success .container form ul {
+  margin-bottom: 20px;
+}
+@media (max-width: 568px) {
+  body main .content-apply-success .container form ul li {
+    text-align: justify;
+  }
+}
+body main .content-apply-success .container form hr {
+  margin: 48px 0;
+}
+body main .content-apply-success .container form .btn {
+  margin-top: 0;
+}
+@media (max-width: 568px) {
+  body main .content-apply-success .container form .btn {
+    width: 100% !important;
+    padding: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

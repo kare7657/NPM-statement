@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>登錄成功</title>
+    <title>簡訊驗證</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -21,15 +21,21 @@
 
     <main>
         <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
-        <!-- 登錄成功 -->
+        <!-- 簡訊驗證 -->
         <section class="content-apply-success">
             <div class="container">
-                <img src="img/icon-success.svg" alt="icon-success">
-                <h2>登錄成功</h2>
-                <p>案件已送出，案件編號：20231219001。系統已寄發驗證信，請於 3 小時內至 Email 點擊確認連結</p>
-                <div class="btn">
-                    <button type="button" onclick="javascript:location.href='case-apply.html'">繼續登錄</button>
-                </div>
+                <img src="img/icon-sms.svg" alt="icon-sms">
+                <h2>簡訊驗證</h2>
+                <p>請入簡訊驗證碼</p>
+                <form>
+                    <div class="form-gp">
+                        <label for="sms-num">簡訊驗證碼<span class="notice">*</span></label>
+                        <input type="text" name="sms-num" id="sms-num" placeholder="請輸入簡訊驗證碼">
+                    </div>
+                    <div class="btn">
+                        <input type="button" value="送出">
+                    </div>
+                </form>
             </div>
         </section>
     </main>

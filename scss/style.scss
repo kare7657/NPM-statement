@@ -491,9 +491,9 @@ body {
                 text-align: center;
                 padding: $p-XL 0;
                 p {
-                    margin-top: $m-XXS;
+                    // margin-top: $m-XXS;
                     text-align: center;
-                    @include pad{
+                    @include pad {
                         padding: 0 $p-2L;
                     }
                     @include mobile-L {
@@ -506,10 +506,38 @@ body {
                     margin-bottom: $m-XS;
                 }
                 h2 {
-                    margin-bottom: $m-XS;
+                    margin-bottom: $m-XXS;
                 }
                 .btn {
                     margin-top: $m-S;
+                }
+                form {
+                    max-width: 400px;
+                    margin-top: $m-S;
+                    ul {
+                        margin-bottom: $m-S;
+                        li {
+                            @include mobile-L {
+                                text-align: justify;
+                            }
+                        }
+                    }
+                    hr {
+                        margin: $m-L 0;
+                    }
+                    .btn {
+                        margin-top: 0;
+                        @include mobile-L {
+                            width: 100% !important;
+                            padding: 0;
+                        }
+                        // input[type="button"],
+                        // input[type="submit"] {
+                        //     @include mobile-L {
+                        //         width: 100% !important;
+                        //     }
+                        // }
+                    }
                 }
             }
         }
