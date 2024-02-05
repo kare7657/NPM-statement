@@ -114,10 +114,13 @@
                         <div class="item">
                             <input type="checkbox" value="" id="private-agree">
                             <label for="private-agree">
-                                <span>我同意</span> <a href="private.html" target="_blank" title="[另開視窗]隱私權宣告">隱私權宣告</a><span
-                                    class="notice">*</span>
+                                <span>我同意</span> <a href="private.html" target="_blank"
+                                    title="[另開視窗]隱私權宣告">隱私權宣告</a><span class="notice">*</span>
                             </label>
                         </div>
+                    </div>
+                    <div class="form-gp">
+                        <a href="#" data-toggle="modal" data-target="#modalChangPWD">modal-sample</a>
                     </div>
 
                     <div class="btn-tool">
@@ -127,6 +130,58 @@
             </div>
 
         </section>
+
+        <!-- modal -->
+        <div class="modal fade modal-template" id="modalChangPWD" tabindex="-1" role="dialog"
+            aria-labelledby="modalPrivateLabel" data-backdrop="static" style=" padding-top: 0;">
+            <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                class="glyphicon glyphicon-remove" aria-hidden="true"></span></button> -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2 class="modal-title" id="modalPrivateLabel">變更密碼</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-gp">
+                                <label for="account">帳號<span class="notice">*</span></label>
+                                <input type="password" name="account" id="account" value="">
+                                <div class="text">
+                                    <p class="notice">testtesttesttest</p>
+                                </div>
+                            </div>
+                            <div class="form-gp">
+                                <label for="email">信箱<span class="notice">*</span></label>
+                                <input type="text" name="email" id="email" value="">
+                                <div class="text">
+                                    <p class="notice">testtesttesttest</p>
+                                </div>
+                            </div>
+                            <div class="code-gp">
+                                <label for="code">驗證碼</label>
+                                <div class="text-gp">
+                                    <input class="code" type="text" name="code" id="code">
+                                    <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                                    <button name="reform" id="reform2" class="reform" onclick="" title="重新整理"
+                                        type="button"><i class="fas fa-sync-alt"></i></button>
+                                    <button name="audio" id="btn_Voice2" class="btnPlayAudio" onclick="PlayVoice();"
+                                        title="播放驗證碼語音" type="button"><i class="fas fa-volume-up"></i></button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="go" id="go">確認更改</button>
+                            <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
 
     </main>
     <!-- footer -->
