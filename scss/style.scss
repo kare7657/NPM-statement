@@ -91,7 +91,7 @@ body {
         min-height: 747px;
         width: 100%;
         @include web-XL {
-            min-height: unset;
+            min-height: 76vh;
         }
         @include web-L {
             min-height: 79vh;
@@ -491,8 +491,8 @@ body {
                 text-align: center;
                 padding: $p-XL 0;
                 p {
-                    // margin-top: $m-XXS;
                     text-align: center;
+                    color: black;
                     @include pad {
                         padding: 0 $p-2L;
                     }

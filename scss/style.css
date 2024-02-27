@@ -2469,7 +2469,7 @@ body main {
 }
 @media (max-width: 1550px) {
   body main {
-    min-height: unset;
+    min-height: 76vh;
   }
 }
 @media (max-width: 1367px) {
@@ -2929,6 +2929,7 @@ body main .content-apply-success .container {
 }
 body main .content-apply-success .container p {
   text-align: center;
+  color: black;
 }
 @media (max-width: 768px) {
   body main .content-apply-success .container p {

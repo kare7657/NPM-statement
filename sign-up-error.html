@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>登錄失敗</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body class="no-bg">
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <!-- 登錄失敗 -->
+        <section class="content-apply-success">
+            <div class="container">
+                <img src="img/icon-cancel.svg" alt="icon-success">
+                <h2>登錄失敗</h2>
+                <p>已超過驗證時間，請重新登錄案件</p>
+                <!-- <div class="btn">
+                    <button type="button" onclick="javascript:location.href='case-apply.html'">繼續登錄</button>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+
+</html>
