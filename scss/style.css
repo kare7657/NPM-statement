@@ -2968,11 +2968,32 @@ body main .content-apply-success .container form hr {
   margin: 48px 0;
 }
 body main .content-apply-success .container form .btn {
-  margin-top: 0;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 @media (max-width: 568px) {
   body main .content-apply-success .container form .btn {
     width: 100% !important;
     padding: 0;
   }
+}
+body main .content-apply-success .container form .btn input[type=button],
+body main .content-apply-success .container form .btn input[type=submit] {
+  width: auto;
+  margin: 0 12px;
+}
+@media (max-width: 568px) {
+  body main .content-apply-success .container form .btn input[type=button],
+  body main .content-apply-success .container form .btn input[type=submit] {
+    width: 100% !important;
+  }
+}
+body main .content-apply-success .container form .btn .time {
+  font-size: 1rem;
+  line-height: 40px;
+  margin-left: 4px;
+  font-weight: normal;
+  color: #dcdddd;
 }/*# sourceMappingURL=style.css.map */
