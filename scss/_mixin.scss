@@ -41,7 +41,7 @@
 }
 // 通用
 @mixin all() {
-    font-family: "微軟正黑體" !important;
+    font-family: "微軟正黑體";
     box-sizing: border-box !important;
     .container {
         max-width: 1440px;
@@ -143,14 +143,14 @@
         }
     }
     //font-awesome
-    .fa,
-    .fas,
-    .far,
-    .fal,
-    .fad,
-    .fab {
-        font-family: "Font Awesome 5 Free" !important;
-    }
+    // .fa,
+    // .fas,
+    // .far,
+    // .fal,
+    // .fad,
+    // .fab {
+    //     font-family: "Font Awesome 5 Free" !important;
+    // }
     //無障礙框線
     :focus {
         outline: #fcd256 dotted 3px !important;
@@ -1008,7 +1008,7 @@
     .pagination {
         display: flex;
         justify-content: center;
-        margin-top: $m-XS;
+        margin-top: $m-M;
         white-space: nowrap;
         @include mobile-L() {
             justify-content: center;
@@ -2339,6 +2339,119 @@
                     &:nth-child(odd) {
                         background-color: rgba($color: $primary-tint, $alpha: 0.1);
                     }
+                }
+            }
+        }
+    }
+}
+@mixin searchbar() {
+    .searchbar {
+        display: flex;
+        margin-bottom: $m-L;
+        @include mobile-L() {
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-bottom: $m-M;
+        }
+        select {
+            min-width: 180px;
+            width: initial;
+            margin-right: $m-S;
+            @include mobile-L {
+                width: 100%;
+                margin-bottom: $m-S;
+            }
+        }
+        input[type="search"] {
+            width: 250px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: solid 1px $complementary;
+            background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
+            @include mobile-L() {
+                width: 100%;
+                padding: 5px 8px;
+            }
+            &:focus {
+                width: 270px;
+                transition: 0.5s;
+                @include mobile-L() {
+                    width: 100%;
+                }
+            }
+        }
+        button {
+            margin-left: $m-S;
+            @include mobile-L() {
+                width: 100%;
+                margin-top: $m-XS;
+            }
+        }
+    }
+}
+@mixin collapse {
+    .collapse-gp {
+        padding: 0;
+        margin-bottom: $m-S;
+        .collapsible {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            padding: $p-S $p-XS;
+            border: none;
+            background-color: $primary-table;
+            outline: none;
+            font-size: $size-h5;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            @include mobile-XS() {
+                font-size: $text;
+            }
+            &:hover {
+                filter: initial;
+            }
+            &::after {
+                // content: "\002B";
+                content: "\f107";
+                color: $secondary;
+                font-weight: bold;
+                font-family: "Font Awesome 6 Free";
+                float: right;
+                margin-left: 5px;
+            }
+        }
+        .active:after {
+            // content: "\2212";
+            content: "\f106";
+        }
+        .content {
+            padding: 0 $p-XS;
+            margin-bottom: $m-S;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            @include mobile-XS() {
+                margin-bottom: $m-S;
+            }
+            p {
+                text-align: justify;
+                font-size: $text;
+                color: $text;
+                margin: $m-XS 0;
+                @include mobile-XS() {
+                    font-size: $size-p;
+                }
+            }
+            ul,
+            li {
+                list-style: none;
+                font-size: $text;
+                color: $text;
+                @include mobile-XS() {
+                    font-size: $size-p;
                 }
             }
         }

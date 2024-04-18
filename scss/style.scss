@@ -29,6 +29,8 @@ body {
     @include back-top();
     @include form();
     @include table();
+    @include searchbar;
+    @include collapse;
     /* 跳到主要內容區塊 */
     .for_accessibility .go-main {
         position: absolute;
@@ -543,13 +545,61 @@ body {
                                 width: 100% !important;
                             }
                         }
-                        .time{
+                        .time {
                             font-size: $size-p;
                             line-height: 40px;
                             margin-left: $m-XXS;
                             font-weight: normal;
                             color: $bk-20;
                         }
+                    }
+                }
+            }
+        }
+        // 常見問題
+        .content-FAQ {
+            max-width: 1440px;
+            margin: auto;
+            padding: $p-S 0;
+            @include web-XL {
+                max-width: 1280px;
+            }
+            @include web-L {
+                max-width: 1140px;
+            }
+            @include mobile-L {
+                padding-top: 0;
+            }
+            h2 {
+                text-align: center;
+                margin-bottom: $p-S;
+            }
+            &.container {
+                @include pad {
+                    padding-top: 0;
+                }
+            }
+            .card {
+                padding: $p-L 0;
+                @include pad {
+                    padding: $p-M $p-XL;
+                }
+                @include mobile-L {
+                    padding: $p-S;
+                }
+                .faq-gp {
+                    max-width: 800px;
+                    margin: auto;
+                    margin-top: $m-S;
+                    // .collapsible {
+                    //     display: flex;
+                    //     align-items: center;
+                    //     justify-content: space-between;
+                    //     width: 100%;
+
+                    // }
+                    .searchbar {
+                        // margin: $m-S 0;
                     }
                 }
             }

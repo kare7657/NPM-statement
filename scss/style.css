@@ -1,6 +1,6 @@
 @charset "UTF-8";
 * {
-  font-family: "微軟正黑體" !important;
+  font-family: "微軟正黑體";
   box-sizing: border-box !important;
   /* Chrome, Safari, Edge, Opera */
   /* Firefox */
@@ -114,14 +114,6 @@
   * ul:not(.nav, .breadcrumb) li:not(.nav-item) {
     margin-bottom: 12px !important;
   }
-}
-* .fa,
-* .fas,
-* .far,
-* .fal,
-* .fad,
-* .fab {
-  font-family: "Font Awesome 5 Free" !important;
 }
 * :focus {
   outline: #fcd256 dotted 3px !important;
@@ -1038,7 +1030,7 @@
 * .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 12px;
+  margin-top: 36px;
   white-space: nowrap;
 }
 @media (max-width: 568px) {
@@ -2402,6 +2394,132 @@ body .mb-separate tr th {
     background-color: rgba(190, 85, 85, 0.1);
   }
 }
+body .searchbar {
+  display: flex;
+  margin-bottom: 48px;
+}
+@media (max-width: 568px) {
+  body .searchbar {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+}
+body .searchbar select {
+  min-width: 180px;
+  width: initial;
+  margin-right: 20px;
+}
+@media (max-width: 568px) {
+  body .searchbar select {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+body .searchbar input[type=search] {
+  width: 250px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: solid 1px #919191;
+  background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
+}
+@media (max-width: 568px) {
+  body .searchbar input[type=search] {
+    width: 100%;
+    padding: 5px 8px;
+  }
+}
+body .searchbar input[type=search]:focus {
+  width: 270px;
+  transition: 0.5s;
+}
+@media (max-width: 568px) {
+  body .searchbar input[type=search]:focus {
+    width: 100%;
+  }
+}
+body .searchbar button {
+  margin-left: 20px;
+}
+@media (max-width: 568px) {
+  body .searchbar button {
+    width: 100%;
+    margin-top: 12px;
+  }
+}
+body .collapse-gp {
+  padding: 0;
+  margin-bottom: 20px;
+}
+body .collapse-gp .collapsible {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 24px 16px;
+  border: none;
+  background-color: #FFF9F9;
+  outline: none;
+  font-size: 1.25rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 320px) {
+  body .collapse-gp .collapsible {
+    font-size: #666666;
+  }
+}
+body .collapse-gp .collapsible:hover {
+  filter: initial;
+}
+body .collapse-gp .collapsible::after {
+  content: "\f107";
+  color: #3D3D3D;
+  font-weight: bold;
+  font-family: "Font Awesome 6 Free";
+  float: right;
+  margin-left: 5px;
+}
+body .collapse-gp .active:after {
+  content: "\f106";
+}
+body .collapse-gp .content {
+  padding: 0 16px;
+  margin-bottom: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+@media (max-width: 320px) {
+  body .collapse-gp .content {
+    margin-bottom: 20px;
+  }
+}
+body .collapse-gp .content p {
+  text-align: justify;
+  font-size: #666666;
+  color: #666666;
+  margin: 12px 0;
+}
+@media (max-width: 320px) {
+  body .collapse-gp .content p {
+    font-size: 1rem;
+  }
+}
+body .collapse-gp .content ul,
+body .collapse-gp .content li {
+  list-style: none;
+  font-size: #666666;
+  color: #666666;
+}
+@media (max-width: 320px) {
+  body .collapse-gp .content ul,
+  body .collapse-gp .content li {
+    font-size: 1rem;
+  }
+}
 body .for_accessibility .go-main {
   position: absolute;
   top: 18px;
@@ -2996,4 +3114,51 @@ body main .content-apply-success .container form .btn .time {
   margin-left: 4px;
   font-weight: normal;
   color: #dcdddd;
+}
+body main .content-FAQ {
+  max-width: 1440px;
+  margin: auto;
+  padding: 24px 0;
+}
+@media (max-width: 1550px) {
+  body main .content-FAQ {
+    max-width: 1280px;
+  }
+}
+@media (max-width: 1367px) {
+  body main .content-FAQ {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 568px) {
+  body main .content-FAQ {
+    padding-top: 0;
+  }
+}
+body main .content-FAQ h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  body main .content-FAQ.container {
+    padding-top: 0;
+  }
+}
+body main .content-FAQ .card {
+  padding: 40px 0;
+}
+@media (max-width: 768px) {
+  body main .content-FAQ .card {
+    padding: 32px 56px;
+  }
+}
+@media (max-width: 568px) {
+  body main .content-FAQ .card {
+    padding: 24px;
+  }
+}
+body main .content-FAQ .card .faq-gp {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20px;
 }/*# sourceMappingURL=style.css.map */
