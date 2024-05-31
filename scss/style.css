@@ -20,7 +20,7 @@
     max-width: 1140px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   * .container {
     max-width: initial;
     padding-top: 16px;
@@ -443,7 +443,7 @@
   margin-top: 36px;
   margin-bottom: 12px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   * .modal-template .modal-dialog .modal-content .modal-header {
     margin: 24px 0;
   }
@@ -462,7 +462,7 @@
   margin: auto;
   padding: 16px 64px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   * .modal-template .modal-dialog .modal-content .modal-body {
     padding: 0 32px;
   }
@@ -687,7 +687,7 @@
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   * .modal-template .modal-dialog .modal-content .modal-body .code-gp {
     justify-content: start;
   }
@@ -928,7 +928,7 @@
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   * .modal-template .modal-dialog .modal-content .modal-body .code-gp {
     justify-content: start;
   }
@@ -1172,20 +1172,20 @@ body .navbar .pc .top {
 @media (max-width: 1367px) {
   body .navbar .pc .top {
     max-width: 1140px;
+    padding: 16px 24px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body .navbar .pc .top {
     max-width: initial;
     margin-left: 0;
-    padding: 16px 24px;
   }
 }
 body .navbar .pc .top .logo {
   display: flex;
   align-items: center;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body .navbar .pc .top .logo {
     width: 71%;
   }
@@ -1199,7 +1199,7 @@ body .navbar .pc .top .logo h1 {
   margin: 0;
   padding: 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body .navbar .pc .top .logo h1 {
     font-size: 1.75rem;
   }
@@ -1210,7 +1210,7 @@ body .navbar .pc .top .right {
   justify-content: end;
   margin-left: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body .navbar .pc .top .right {
     width: 29%;
     margin-left: 0;
@@ -1306,7 +1306,7 @@ body .navbar .pc .bottom .nav-gp {
     max-width: 1140px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body .navbar .pc .bottom .nav-gp {
     padding: 2px 24px;
   }
@@ -1358,18 +1358,25 @@ body .navbar .pc .bottom .nav-gp .nav-list {
   display: none;
   text-align: center;
   position: absolute;
-  top: 51px;
+  top: 50px;
   left: 0;
   width: 100%;
+  min-width: 200px;
   background-color: #4A2121;
-  transition: 0.5s;
+  padding: 0;
+  border-top: solid 4px #7D0000;
 }
-body .navbar .pc .bottom .nav-gp .nav-list a h5 {
-  margin: 0;
-  padding: 12px 20px;
+body .navbar .pc .bottom .nav-gp .nav-list a {
+  transition: 0.3s;
+  padding: 12px 24px;
+  text-align: left;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
   color: white;
 }
-body .navbar .pc .bottom .nav-gp .nav-list a h5:hover {
+body .navbar .pc .bottom .nav-gp .nav-list a:last-child {
+  border-bottom: none;
+}
+body .navbar .pc .bottom .nav-gp .nav-list a:hover {
   background-color: #7D0000;
 }
 body .navbar .mobile {
@@ -1539,7 +1546,7 @@ body .footer .container {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body .footer .container {
     padding: 24px 0;
   }
@@ -1626,7 +1633,7 @@ body .breadcrumb {
   margin: 0;
   margin-bottom: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body .breadcrumb {
     margin-top: 16px;
   }
@@ -1690,7 +1697,7 @@ body .back-top {
   line-height: 45px;
   text-align: center;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body .back-top {
     right: 25px;
     bottom: 25px;
@@ -2032,7 +2039,7 @@ body form .code-gp {
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body form .code-gp {
     justify-content: start;
   }
@@ -2558,7 +2565,7 @@ body .bg-img {
   background-repeat: no-repeat;
   background-position: 30% center;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body .bg-img {
     width: 100%;
     height: 100%;
@@ -2595,7 +2602,7 @@ body main {
     min-height: 79vh;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body main {
     min-height: 84vh;
   }
@@ -2659,7 +2666,7 @@ body main .content-webmap .list-gp .text-gp {
   margin-right: 20px;
   margin-bottom: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   body main .content-webmap .list-gp .text-gp {
     width: 30%;
   }
