@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
+    <title>民眾意見案件管理系統</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- google 日文字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;600&display=swap" rel="stylesheet">
+    <!-- our css -->
+    <link rel="stylesheet" href="scss/style.css">
+
+    <style>
+        body * {
+            font-family: "Noto Sans JP", sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="bg-img">
+    <!-- navbar -->
+    <header id="header"></header>
+    <main>
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C">:::</a>
+        <section class="content-index container">
+            <div class="card">
+                <h2>人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利とを承認することは</h2>
+                <ul>
+                    <li>人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利とを承認することは、世界における自由、正義及び平和の基礎であるので、
+                        人権の無視及び軽侮が、人類の良心を踏みにじった野蛮行為をもたらし、言論及び信仰の自由が受けられ、恐怖及び欠乏のない世界の到来が、一般の人々の最高の願望として宣言されたので、
+                        人間が専制と圧迫とに対する最後の手段として反逆に訴えることがないようにするためには、法の支配によって人権を保護することが肝要であるので、
+                        諸国間の友好関係の発展を促進することが肝要であるので、国際連合の諸国民は、国連憲章において、基本的人権、人間の尊厳及び価値並びに男女の同権についての信念を再確認し、かつ、一層大きな自由のうちで社会的進歩と生活水準の向上とを促進することを決意したので
+                    </li>
+                </ul>
+                <div class="btn">
+                    <button type="button" onclick="location.href='description.html'">更多</button>
+                </div>
+            </div>
+            <div class="type-gp">
+                <a class="card" href="case-apply.html" title="案件申請">
+                    <div class="left">
+                        <img src="img/icon-apply.png" alt="案件申請icon">
+                        <h2>案件登錄</h2>
+                    </div>
+                    <div class="right">
+                        <p>填寫想對故宮博物院陳情的案件內容，需留下聯絡資訊</p>
+                    </div>
+                </a>
+                <a class="card" href="case-search.html" title="案件查詢">
+                    <div class="left">
+                        <img src="img/icon-search.png" alt="案件查詢icon">
+                        <h2>案件查詢</h2>
+                    </div>
+                    <div class="right">
+                        <p>輸入案件編號及 Email，查詢已申請案件的處理進度</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('header.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+
+</html>
