@@ -56,6 +56,11 @@
 * h2:not(:first-of-type) {
   margin-top: 20px;
 }
+@media (max-width: 375px) {
+  * h2 {
+    font-size: 1.625rem;
+  }
+}
 * h3 {
   font-size: 1.625rem;
   color: black;
@@ -87,6 +92,11 @@
   text-align: justify;
   word-wrap: break-word;
   word-break: break-all;
+}
+@media (max-width: 320px) {
+  * p {
+    font-size: inherit !important;
+  }
 }
 * .ellipsis {
   overflow: hidden;
@@ -163,8 +173,7 @@
 * h2,
 * h3,
 * h4,
-* h5,
-* h6 {
+* h5 {
   font-weight: bold;
 }
 * ::-moz-selection {
@@ -936,7 +945,7 @@ body {
 }
 @media (max-width: 320px) {
   body {
-    font-size: 0.775rem;
+    font-size: 0.95rem !important;
   }
 }
 body .navbar {
@@ -2430,6 +2439,13 @@ body main {
     padding-bottom: 24px;
   }
 }
+body main .progress {
+  height: 20px;
+  margin-bottom: 8px;
+}
+body main .progress-bar {
+  background-color: #7D0000;
+}
 body main .card {
   background-color: white !important;
   padding: 32px 40px;
@@ -2800,6 +2816,12 @@ body main .content-apply .card .form-view .view-gp:nth-last-of-type(1) {
 body main .content-apply .card .form-view .view-gp h5 {
   width: 100%;
 }
+@media (max-width: 375px) {
+  body main .content-apply .card .form-view .view-gp h5,
+  body main .content-apply .card .form-view .view-gp p {
+    font-size: 0.875rem;
+  }
+}
 body main .content-apply .card .form-view .view-link h5 {
   width: 100%;
   margin-bottom: 4px;
@@ -2856,6 +2878,18 @@ body main .content-apply .card .form-view table.reply:last-child {
   body main .content-apply .card .form-view table.reply thead th:nth-child(2) {
     width: 65% !important;
   }
+}
+body main .content-apply .card .form-view table.reply td ol {
+  padding: 0;
+  line-height: 2;
+  list-style-position: inside;
+  margin-bottom: 8px;
+}
+body main .content-apply .card .form-view table.reply td a {
+  font-weight: bold;
+}
+body main .content-apply .card .form-view table.reply td a i {
+  margin-right: 8px;
 }
 body main .content-apply-success .container {
   height: inherit;

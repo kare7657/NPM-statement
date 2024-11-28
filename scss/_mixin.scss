@@ -83,7 +83,10 @@
         line-height: 1.25;
         &:not(:first-of-type) {
             margin-top: $m-S;
-        }
+        } 
+        @include mobile-S{
+            font-size: $size-h3;
+        }       
     }
     h3 {
         font-size: $size-h3;
@@ -116,6 +119,9 @@
         text-align: justify;
         word-wrap: break-word;
         word-break: break-all;
+        @include mobile-XS() {
+            font-size: inherit !important;
+        }
     }
     .ellipsis {
         overflow: hidden;
@@ -198,8 +204,7 @@
     h2,
     h3,
     h4,
-    h5,
-    h6 {
+    h5{
         font-weight: bold;
     }
     ::selection {
