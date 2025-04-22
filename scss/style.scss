@@ -323,6 +323,7 @@ body {
                         }
                         h2 {
                             margin-bottom: 0;
+                            text-align: center;
                             @include mobile-L {
                                 font-size: $size-h3;
                             }

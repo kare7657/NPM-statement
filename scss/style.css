@@ -2683,6 +2683,7 @@ body main .content-index .type-gp .card .left {
 }
 body main .content-index .type-gp .card .left h2 {
   margin-bottom: 0;
+  text-align: center;
 }
 @media (max-width: 568px) {
   body main .content-index .type-gp .card .left h2 {
