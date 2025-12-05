@@ -287,8 +287,8 @@
   background-color: #e5e5e5;
 }
 * input[type=checkbox], * input[type=radio] {
-  width: 20px;
-  height: 20px;
+  width: 20px !important;
+  height: 20px !important;
   line-height: 2;
   margin-right: 8px;
   display: inline;
@@ -1539,7 +1539,7 @@ body .back-top {
 }
 @media (max-width: 568px) {
   body {
-    border-radius: unset;
+    border-radius: initial;
   }
 }
 body form {
@@ -1735,6 +1735,21 @@ body form .choice .item {
   body form .choice .item:not(:nth-last-child(1)) {
     margin-bottom: 16px;
   }
+}
+body form .choice .item-withInput {
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+body form .choice .item-withInput input:not(input[type=checkbox]) {
+  width: auto;
+}
+body form .choice .item-withInput input:not(input[type=checkbox]).qty {
+  width: 100px;
+}
+body form .choice .item-withInput .unit {
+  margin-left: 12px;
 }
 body form .choice h5 {
   width: 100%;
