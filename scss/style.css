@@ -1751,6 +1751,9 @@ body form .choice .item-withInput input:not(input[type=checkbox]).qty {
 body form .choice .item-withInput .unit {
   margin-left: 12px;
 }
+body form .choice .item-withInput .indent {
+  text-indent: 1.75rem;
+}
 body form .choice h5 {
   width: 100%;
   text-align: left;

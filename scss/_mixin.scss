@@ -475,10 +475,10 @@
             }
         }
         .modal-dialog {
-            max-width: 650px;
-            @include pad() {
-                max-width: 600px;
-            }
+            // max-width: 650px;
+            // @include pad() {
+            //     max-width: 600px;
+            // }
             .modal-content {
                 border-radius: 15px;
                 .modal-header {
@@ -1649,11 +1649,14 @@
                 input:not(input[type="checkbox"]) {
                     width: auto;
                     &.qty {
-                        width: 100px ;
+                        width: 100px;
                     }
                 }
                 .unit {
                     margin-left: $m-XS;
+                }
+                .indent {
+                    text-indent: 1.75rem;
                 }
             }
             h5 {
