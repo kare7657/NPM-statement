@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_32x32.ico" type="image/x-icon">
-    <title>案件登錄-民眾意見案件管理系統</title>
+    <title>數位圖檔申請-民眾意見案件管理系統</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
@@ -26,88 +26,160 @@
                 <ul>
                     <li><a href="index.html"><i class="fas fa-home"></i></a></li>
                     <li>></li>
-                    <li><span>案件登錄</span></li>
+                    <li><span>數位圖檔申請</span></li>
                 </ul>
             </div>
         </div>
         <section class="content-apply container">
-            <h2>案件登錄</h2>
+            <h2>數位圖檔申請</h2>
             <div class="card">
                 <form>
                     <ul>
-                        <li>檢舉人基本資料將採保密方式處理，但因業務需要，承辦機關得調閱陳情人基本資料以供處理</li>
-                        <li>為確保他人權益，陳情或檢舉案件，應內容具體或明確列舉事證，否則本府將依規不予處理或不予受理</li>
-                        <li>陳情事項請簡潔明確表達，並以真實案件為限，與本院無關之建議、情緒批評、惡意攻擊、謾罵等，恕不服務</li>
-                        <li class="notice">經查證所留姓名或住址、聯絡電話、電子郵件位址屬偽冒、匿名虛報不實者，本院得不予處理</li>
-                        <li class="notice">案件送出後，請盡速至個人信箱點選確認信。倘未點選確認信，本院將無法收件</li>
+                        <li>申請說明</li>
+                        <li>文字文字文字文字文字文字文字文字文字文字文字文字文字文字</li>
+                        <li>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</li>
                     </ul>
-                    <div class="form-gp choice">
-                        <h5>陳情院別<span class="notice">*</span></h5>
-                        <div class="item">
-                            <input type="radio" name="state" value="" id="north" checked>
-                            <label for="north">
-                                北部院區 (臺北市)
-                            </label>
-                        </div>
-                        <div class="item">
-                            <input type="radio" name="state" value="" id="south">
-                            <label for="south">
-                                南部院區 (嘉義縣)
-                            </label>
-                        </div>
+                    <h3>基本資料</h3>
+                    <div class="form-gp">
+                        <label for="name">申請人姓名或公司團體名<span class="notice">*</span></label>
+                        <input type="text" name="name" id="name" placeholder="申請人姓名或公司團體名">
                     </div>
+                    <div class="form-gp">
+                        <label for="address">地址<span class="notice">*</span></label>
+                        <input type="text" name="address" id="address" placeholder="請輸入地址">
+                    </div>
+                    <div class="form-gp">
+                        <label for="tax-id">統一編號<span class="notice">*</span></label>
+                        <input type="text" name="tax-id" id="tax-id" placeholder="請輸入統一編號">
+                    </div>
+                    <div class="form-gp">
+                        <label for="contact-name">聯絡人<span class="notice">*</span></label>
+                        <input type="text" name="contact-name" id="contact-name" placeholder="請輸入姓名">
+                    </div>
+                    <div class="form-gp">
+                        <label for="phone-number">聯絡人電話<span class="notice">*</span></label>
+                        <input type="text" name="phone-number" id="phone-number" placeholder="請輸入聯絡人電話">
+                    </div>
+                    <div class="form-gp">
+                        <label for="email">Email<span class="notice">*</span></label>
+                        <input type="email" name="email" id="email" placeholder="請輸入Email">
+                        <p class="notice">※傳送圖檔下載連結使用，請填寫gmail信箱</p>
+                    </div>
+                    <h3>用途</h3>
+
                     <div class="form-gp choice">
-                        <h5>複選項目<span class="notice">*</span></h5>
                         <div class="item-withInput">
                             <input type="checkbox" name="publication" id="publication">
                             <label for="publication">
-                                出版品：出版數量
+                                符合優惠條件：需提供證明文件，請參閱「國立故宮博物院數位物件利用管理要點」第５點說明
+                            </label>
+                        </div>
+
+                        <div class="item-withInput">
+                            <input type="checkbox" name="publication" id="publication">
+                            <label for="publication">
+                                出版品：出版品數量
                             </label>
                             <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入數量"
                                 class="qty"> <span class="unit">冊</span>
                         </div>
                         <div class="item-withInput ">
-                            <label for="publication" class="indent">
-                                出版品：出版數量
+                            <input type="checkbox" name="publication" id="publication">
+                            <label for="publication">
+                                電子書：出版數量
                             </label>
                             <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入數量"
                                 class="qty"> <span class="unit">冊</span>
                         </div>
+                        <div class="item-withInput ">
+                            <input type="checkbox" name="publication" id="publication">
+                            <label for="publication">
+                                廣告傳單、提袋或其他包裝材等：申請數量
+                            </label>
+                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入數量"
+                                class="qty"> <span class="unit">件</span>
+                        </div>
+
+                        <div class="item-withInput widdth-full">
+                            <input type="checkbox" name="publication" id="publication">
+                            <label for="publication">
+                                展覽、裝潢布置或大型看板等：
+                            </label>
+                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請填寫具體用途"
+                                class="intent full-input">
+                        </div>
                         <div class="item-withInput">
                             <input type="checkbox" name="publication" id="publication">
                             <label for="publication">
-                                出版品：出版數量
+                                文具用品、明信片、時曆（月曆、日曆）、賀卡、娛樂用品、餐具用品、傢俱、寢具、衛浴設備、家電等
+                            </label>
+                        </div>
+                        <div class="item-withInput">
+                            <label for="publication" class="indent">
+                                商品名稱：
+                            </label>
+                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入名稱"
+                                class="qty">
+                        </div>
+                        <div class="item-withInput">
+                            <label for="publication" class="indent">
+                                商品售價：
+                            </label>
+                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入價格"
+                                class="qty"> <span class="unit">元（新台幣）</span>
+                        </div>
+                        <div class="item-withInput ">
+                            <label for="publication" class="indent">
+                                申請數量：
+                            </label>
+                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入數量"
+                                class="qty"> <span class="unit">件</span>
+                        </div>
+                        <div class="item-withInput">
+                            <input type="checkbox" name="publication" id="publication">
+                            <label for="publication">
+                                網際網路使用：
                             </label>
                             <input type="radio" name="state" value="" id="north" checked>
                             <label for="north">
-                                北部院區 (臺北市)
+                                6 個月
                             </label>
                             <input type="radio" name="state" value="" id="south">
                             <label for="south">
-                                南部院區 (嘉義縣)
+                                1 年
+                            </label>
+                            <input type="radio" name="state" value="" id="south">
+                            <label for="south">
+                                2 年
+                            </label>
+                            <input type="radio" name="state" value="" id="south">
+                            <label for="south">
+                                3 年以上
                             </label>
                         </div>
                     </div>
-                    <div class="form-gp">
-                        <label for="caes-type">案件類型</label>
-                        <select name="type" id="caes-type">
-                            <option value="list1">請選擇案件類型 (非必填)</option>
-                            <option value="list2">選單2</option>
-                            <option value="list3">選單3</option>
-                        </select>
+
+                    <h3>圖檔類別</h3>
+                    <div class="form-gp choice">
+                        <div class="item-withInput">
+                            <input type="radio" name="picture-state" value="" id="level1" checked>
+                            <label for="level1">
+                                一級（約4000 x 3500 pixel）
+                            </label>
+                            <input type="radio" name="picture-state" value="" id="level2">
+                            <label for="level2">
+                                二級（約6000 x 5000 pixel）
+                            </label>
+                            <input type="radio" name="picture-state" value="" id="level3">
+                            <label for="level3">
+                                三級（約7000 x 5000 pixel）
+                            </label>
+                        </div>
+                        <p class="notice">
+                            ※備註：為符合原始圖檔比例，圖檔解析度以總乘積為主(總乘積＝長X寬)，長寛比例無固定
+                        </p>
                     </div>
-                    <div class="form-gp">
-                        <label for="name">姓名<span class="notice">*</span></label>
-                        <input type="text" name="name" id="name" placeholder="請輸入姓名">
-                    </div>
-                    <div class="form-gp">
-                        <label for="phone-number">手機號碼<span class="notice">*</span></label>
-                        <input type="number" name="phone-number" id="phone-number" placeholder="請輸入手機號碼">
-                    </div>
-                    <div class="form-gp">
-                        <label for="email">Email<span class="notice">*</span></label>
-                        <input type="email" name="email" id="email" placeholder="請輸入Email">
-                    </div>
+                    <h3>數位圖檔名稱／編號</h3>
                     <div class="form-gp">
                         <label for="title">主旨<span class="notice">*</span></label>
                         <input type="text" name="title" id="title" placeholder="請輸入主旨">
@@ -120,6 +192,7 @@
                         <label for="document-id">檔案上傳<span class="notice">*</span></label>
                         <input type="file" id="document-id">
                     </div>
+
                     <div class="finished-file-list">
                         <div class="file-gp">
                             <p class="file-name"><i class="fas fa-paperclip"></i>作品保證書.pdf </p>

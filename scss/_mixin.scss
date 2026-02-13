@@ -1646,6 +1646,7 @@
                 margin-bottom: $m-XS;
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
                 input:not(input[type="checkbox"]) {
                     width: auto;
                     &.qty {
@@ -1657,6 +1658,15 @@
                 }
                 .indent {
                     text-indent: 1.75rem;
+                }
+                &.widdth-full {
+                    display: flex;
+                    justify-content: start;
+                    .full-input {
+                        width: 100%;
+                        margin: $m-XS 0;
+                        margin-left: 1.75rem;
+                    }
                 }
             }
             h5 {

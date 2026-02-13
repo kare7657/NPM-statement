@@ -379,6 +379,11 @@ body {
                 text-align: center;
                 margin-bottom: $p-S;
             }
+            h3{
+                margin-top: $m-M;
+                margin-bottom: $m-S;
+                font-weight: bold;
+            }
             &.container {
                 @include pad {
                     padding-top: 0;
