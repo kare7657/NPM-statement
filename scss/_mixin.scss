@@ -136,7 +136,7 @@
             color: $primary-dark;
         }
     }
-    ul:not(.nav, .breadcrumb) {
+    ul:not(.nav, .breadcrumb),ol {
         padding: 0;
         margin-bottom: 0;
         li:not(.nav-item) {
@@ -1590,21 +1590,24 @@
                 margin-bottom: $m-XS;
             }
             .label-withButton {
+                margin-top: $m-S;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                // justify-content: space-between;
                 width: 100%;
                 @include mobile-L {
                     width: 100%;
+                }
+                h3 {
+                    width: initial;
+                    margin: 0;
                 }
                 label {
                     width: initial;
                 }
                 button {
-                    font-size: $size-p;
-                    padding: 2px $p-XXS;
-                    margin-left: $m-XS;
-                    margin-bottom: $p-XXS;
+                    padding: $m-XXS $m-XS;
+                    margin-left: $m-S;
                     height: initial;
                     @include mobile-L() {
                         font-size: $size-h5;
@@ -1622,6 +1625,29 @@
                     margin-top: 0;
                     i {
                         margin-right: $p-XXS;
+                    }
+                }
+            }
+        }
+        .list-gp {
+            margin-bottom: $m-M;
+            ol,
+            ul {
+                padding-left: 0;
+                li {
+                    width: 100%;
+                    margin-bottom: $m-XS;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5em; // 可選，讓數字和輸入框有點間距
+                    span {
+                        width: 2em; // 或 30px
+                        text-align: center;
+                        flex-shrink: 0;
+                    }
+                    input {
+                        flex: 1;
+                        min-width: 0;
                     }
                 }
             }
@@ -1788,8 +1814,9 @@
             width: 100%;
             padding: 0;
             display: flex;
-            margin-bottom: $m-S;
+            margin-bottom: $m-XS;
             flex-wrap: wrap;
+            margin-bottom: $m-S;
             @include web-S {
                 justify-content: start;
             }
@@ -1805,15 +1832,17 @@
                 display: flex;
                 align-items: center;
                 @include mobile-L() {
-                    flex-wrap: wrap;
+                    justify-content: space-between;
                 }
                 .code {
-                    width: 40%;
+                    width: 30%;
                     margin-right: 10px;
                     margin-bottom: 0;
                     @include mobile-L() {
-                        width: 100%;
-                        margin-bottom: $m-XS;
+                        width: 50%;
+                        justify-content: space-between;
+                    }
+                    @include mobile-XS() {
                         margin-right: 0;
                     }
                 }
@@ -1827,38 +1856,20 @@
                         height: 30px;
                     }
                     @include mobile-L() {
-                        height: 35px;
+                        width: 30%;
+                        height: unset;
+                    }
+                    @include mobile-XS() {
+                        margin-left: $m-XS;
                     }
                 }
-                .reform {
-                    margin-right: $m-XS;
-                    height: auto;
-                    color: $primary-dark;
-                    font-weight: bold;
-                    padding: $m-XXS $p-XXS;
-                    background-color: $primary-table;
-                    @include mobile-L() {
-                        height: 40px;
-                        padding: $m-XXS $m-XS;
-                    }
-                    i {
-                        margin: 0;
-                        font-size: $size-h5;
-                    }
-                }
-                .btnPlayAudio {
-                    height: auto;
-                    color: $primary-dark;
-                    font-weight: bold;
-                    padding: $m-XXS $p-XXS;
-                    background-color: $primary-table;
-                    @include mobile-L() {
-                        height: 40px;
-                        padding: $m-XXS $m-XS;
-                    }
-                    i {
-                        margin: 0;
-                        font-size: $size-h5;
+                .reform,.btnPlayAudio {
+                    // height: 20px;
+                    // width: 20px;
+                    margin: $p-XXS;
+                    background-color: $primary-tint;
+                    i{
+                        margin-right: 0;
                     }
                 }
             }
@@ -2331,5 +2342,105 @@
                 }
             }
         }
+    }
+}
+@mixin datepicker {
+    /* datepicker日期 */
+    .ui-datepicker {
+        font-size: 1rem;
+        font-family: "sans-serif", "微軟正黑體";
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+        vertical-align: middle;
+    }
+    .ui-widget-header {
+        border: none;
+        background: #fff;
+        color: #222;
+        font-weight: bold;
+        margin-bottom: 3px;
+    }
+    .ui-widget-header select {
+        border: 1px solid #eee;
+        height: 35px;
+        padding-left: 10px;
+        border-radius: 4px;
+        font-size: 0.875rem !important;
+    }
+    .ui-datepicker-title {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .ui-datepicker select.ui-datepicker-year {
+        width: 60%;
+        margin-right: 10px;
+    }
+    .ui-datepicker select.ui-datepicker-month {
+        width: calc(40% - 10px);
+    }
+    .ui-datepicker-prev.ui-corner-all,
+    .ui-datepicker-next.ui-corner-all {
+        height: 35px;
+        margin-top: 5px;
+        cursor: pointer;
+        border-radius: 0;
+        color: #555555;
+    }
+    .ui-datepicker-prev.ui-corner-all:hover,
+    .ui-datepicker-next.ui-corner-all:hover {
+        border: none;
+        background-color: #e6f4ff;
+    }
+    .ui-datepicker-prev::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f053";
+        font-weight: bold;
+        width: 12px;
+        line-height: 8px;
+        position: absolute;
+        left: calc(50% - 6px);
+        top: calc(50% - 6px);
+    }
+    .ui-datepicker-next::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f054";
+        font-weight: bold;
+        width: 12px;
+        line-height: 8px;
+        position: absolute;
+        left: calc(50% - 6px);
+        top: calc(50% - 6px);
+    }
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default {
+        background: #fff;
+        border: none;
+    }
+    .ui-state-default:hover {
+        background-color: #f1f8fe;
+    }
+    .ui-datepicker-calendar thead {
+        background-color: #f4f4f4;
+        border: none;
+    }
+    .ui-datepicker-calendar th {
+        padding: 5px 0;
+    }
+    .ui-datepicker .highlight a {
+        cursor: pointer !important ;
+    }
+    .ui-state-highlight {
+        background-color: #ffffe6 !important;
+        border: solid 1px #e0e19f !important;
+    }
+    td.highlight a {
+        background-color: #e6f4ff !important;
+        border: solid 1px #a1d1f5 !important;
+    }
+    .ui-datepicker td a {
+        text-align: center;
+        cursor: default !important;
     }
 }

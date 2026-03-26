@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <!-- jQuery 日期選擇器-->
+    <link rel="stylesheet" href="scss/jquery-ui-1.10.0.custom.min.css" />
     <!-- our css -->
     <link rel="stylesheet" href="scss/style.css">
 
@@ -45,6 +47,13 @@
                         <input type="text" name="name" id="name" placeholder="申請人姓名或公司團體名">
                     </div>
                     <div class="form-gp">
+                        <label for="date">日期<span class="notice">*</span></label>
+                        <div class="date-gp date-icon">
+                            <input type="text" class="mb-nokeyboard western-date date-icon" id="date"
+                                data-toggle="datepicker" placeholder="日期" value="2011-01-01">
+                        </div>
+                    </div>
+                    <div class="form-gp">
                         <label for="address">地址<span class="notice">*</span></label>
                         <input type="text" name="address" id="address" placeholder="請輸入地址">
                     </div>
@@ -69,91 +78,91 @@
 
                     <div class="form-gp choice">
                         <div class="item-withInput">
-                            <input type="checkbox" name="publication" id="publication">
-                            <label for="publication">
+                            <input type="checkbox" name="purpose" id="discount">
+                            <label for="discount">
                                 符合優惠條件：需提供證明文件，請參閱「國立故宮博物院數位物件利用管理要點」第５點說明
                             </label>
                         </div>
 
                         <div class="item-withInput">
-                            <input type="checkbox" name="publication" id="publication">
+                            <input type="checkbox" name="purpose" id="publication">
                             <label for="publication">
                                 出版品：出版品數量
                             </label>
-                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入數量"
+                            <input type="number" name="publication" id="publication-qty" placeholder="請輸入數量"
                                 class="qty"> <span class="unit">冊</span>
                         </div>
-                        <div class="item-withInput ">
-                            <input type="checkbox" name="publication" id="publication">
-                            <label for="publication">
+                        <div class="item-withInput">
+                            <input type="checkbox" name="purpose" id="e-publication">
+                            <label for="e-publication">
                                 電子書：出版數量
                             </label>
-                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入數量"
-                                class="qty"> <span class="unit">冊</span>
+                            <input type="number" name="purpose" id="e-publication-qty" placeholder="請輸入數量" class="qty">
+                            <span class="unit">冊</span>
                         </div>
-                        <div class="item-withInput ">
-                            <input type="checkbox" name="publication" id="publication">
-                            <label for="publication">
+                        <div class="item-withInput">
+                            <input type="checkbox" name="purpose" id="AD">
+                            <label for="AD">
                                 廣告傳單、提袋或其他包裝材等：申請數量
                             </label>
-                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入數量"
-                                class="qty"> <span class="unit">件</span>
+                            <input type="number" name="purpose-qty" id="AD-qty" placeholder="請輸入數量" class="qty"> <span
+                                class="unit">件</span>
                         </div>
 
                         <div class="item-withInput widdth-full">
-                            <input type="checkbox" name="publication" id="publication">
-                            <label for="publication">
+                            <input type="checkbox" name="purpose" id="exhibition">
+                            <label for="exhibition">
                                 展覽、裝潢布置或大型看板等：
                             </label>
-                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請填寫具體用途"
+                            <input type="number" name="purpose-qty" id="exhibition-purpose" placeholder="請填寫具體用途"
                                 class="intent full-input">
                         </div>
                         <div class="item-withInput">
-                            <input type="checkbox" name="publication" id="publication">
-                            <label for="publication">
+                            <input type="checkbox" name="purpose" id="stationery">
+                            <label for="stationery">
                                 文具用品、明信片、時曆（月曆、日曆）、賀卡、娛樂用品、餐具用品、傢俱、寢具、衛浴設備、家電等
                             </label>
                         </div>
                         <div class="item-withInput">
-                            <label for="publication" class="indent">
+                            <label for="stationery-name" class="indent">
                                 商品名稱：
                             </label>
-                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入名稱"
+                            <input type="number" name="purpose-qty" id="stationery-name" placeholder="請輸入名稱"
                                 class="qty">
                         </div>
                         <div class="item-withInput">
-                            <label for="publication" class="indent">
+                            <label for="stationery-price" class="indent">
                                 商品售價：
                             </label>
-                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入價格"
+                            <input type="number" name="purpose-qty" id="stationery-price" placeholder="請輸入價格"
                                 class="qty"> <span class="unit">元（新台幣）</span>
                         </div>
                         <div class="item-withInput ">
-                            <label for="publication" class="indent">
+                            <label for="publication-qty" class="indent">
                                 申請數量：
                             </label>
-                            <input type="number" name="publication-qty" id="publication-qty" placeholder="請輸入數量"
+                            <input type="number" name="purpose-qty" id="publication-qty" placeholder="請輸入數量"
                                 class="qty"> <span class="unit">件</span>
                         </div>
                         <div class="item-withInput">
-                            <input type="checkbox" name="publication" id="publication">
-                            <label for="publication">
+                            <input type="checkbox" name="purpose" id="internet">
+                            <label for="internet">
                                 網際網路使用：
                             </label>
-                            <input type="radio" name="state" value="" id="north" checked>
-                            <label for="north">
+                            <input type="radio" name="internet-howlong" value="" id="6month" checked>
+                            <label for="6month">
                                 6 個月
                             </label>
-                            <input type="radio" name="state" value="" id="south">
-                            <label for="south">
+                            <input type="radio" name="internet-howlong" value="" id="1year">
+                            <label for="1year">
                                 1 年
                             </label>
-                            <input type="radio" name="state" value="" id="south">
-                            <label for="south">
+                            <input type="radio" name="internet-howlong" value="" id="2year">
+                            <label for="2year">
                                 2 年
                             </label>
-                            <input type="radio" name="state" value="" id="south">
-                            <label for="south">
+                            <input type="radio" name="internet-howlong" value="" id="3year">
+                            <label for="3year">
                                 3 年以上
                             </label>
                         </div>
@@ -162,15 +171,15 @@
                     <h3>圖檔類別</h3>
                     <div class="form-gp choice">
                         <div class="item-withInput">
-                            <input type="radio" name="picture-state" value="" id="level1" checked>
+                            <input type="radio" name="picture-size" value="" id="level1" checked>
                             <label for="level1">
                                 一級（約4000 x 3500 pixel）
                             </label>
-                            <input type="radio" name="picture-state" value="" id="level2">
+                            <input type="radio" name="picture-size" value="" id="level2">
                             <label for="level2">
                                 二級（約6000 x 5000 pixel）
                             </label>
-                            <input type="radio" name="picture-state" value="" id="level3">
+                            <input type="radio" name="picture-size" value="" id="level3">
                             <label for="level3">
                                 三級（約7000 x 5000 pixel）
                             </label>
@@ -179,17 +188,58 @@
                             ※備註：為符合原始圖檔比例，圖檔解析度以總乘積為主(總乘積＝長X寬)，長寛比例無固定
                         </p>
                     </div>
-                    <h3>數位圖檔名稱／編號</h3>
                     <div class="form-gp">
-                        <label for="title">主旨<span class="notice">*</span></label>
-                        <input type="text" name="title" id="title" placeholder="請輸入主旨">
+                        <div class="label-withButton">
+                            <h3>數位圖檔名稱／編號</h3>
+                            <button type="button"><i class="fa-solid fa-circle-plus"></i>新增</button>
+                        </div>
                     </div>
-                    <div class="form-gp">
-                        <label for="content">內容<span class="notice">*</span></label>
-                        <textarea name="content" id="content" rows="6" placeholder="請輸入內容"></textarea>
+                    <div class="list-gp">
+                        <ol>
+                            <li>
+                                <span>1</span>
+                                <input type="text" name="picture-title" id="picture-title-1" placeholder="請輸入名稱或編號">
+                            </li>
+                            <li>
+                                <span>2</span>
+                                <input type="text" name="picture-title" id="picture-title-2" placeholder="請輸入名稱或編號">
+                            </li>
+                            <li>
+                                <span>3</span>
+                                <input type="text" name="picture-title" id="picture-title-3" placeholder="請輸入名稱或編號">
+                            </li>
+                        </ol>
+                        <button type="button"><i class="fa-solid fa-circle-plus"></i>新增</button>
                     </div>
+
                     <div class="form-gp">
-                        <label for="document-id">檔案上傳<span class="notice">*</span></label>
+                        <label for="form-upload">申請單上傳<span class="notice">*</span></label>
+                        <input type="file" id="form-upload">
+                    </div>
+
+                    <div class="finished-file-list">
+                        <div class="file-gp">
+                            <p class="file-name"><i class="fas fa-paperclip"></i>作品保證書.pdf </p>
+                            <button type="button" class="icon-btn"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class="file-gp">
+                            <p class="file-name"><i class="fas fa-paperclip"></i>簽名字樣.jpg</p>
+                            <button type="button" class="icon-btn"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class="file-gp">
+                            <p class="file-name"><i class="fas fa-paperclip"></i>版次說明版次說明版次說明版次說明版次說明版次說明版次說明版次說明.png
+                            </p> <button type="button" class="icon-btn"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>可上傳的檔案格式為pdf ，其餘格式請壓縮成 zip 檔再上傳</li>
+                        <li>每份檔案限制為 10MB 以下，總上傳容量為 30MB，最多可上傳 7 個附件</li>
+                        <li>附檔檔名請使用半形英數字命名，檔名限制 20 個字</li>
+                    </ul>
+
+                    <div class="form-gp">
+                        <label for="document-id">附件上傳<span class="notice">*</span></label>
                         <input type="file" id="document-id">
                     </div>
 
@@ -209,11 +259,15 @@
                     </div>
 
                     <ul>
-                        <li>可上傳的檔案格式為.doc .docx .xls .xlsx .pdf .txt .bmp .jpg .gif .odt .ods .avi .mp4 .wav .wma
-                            .wmv ，其餘格式請壓縮成 zip 檔再上傳</li>
+                        <li>可上傳的檔案格式為pdf ，其餘格式請壓縮成 zip 檔再上傳</li>
                         <li>每份檔案限制為 10MB 以下，總上傳容量為 30MB，最多可上傳 7 個附件</li>
                         <li>附檔檔名請使用半形英數字命名，檔名限制 20 個字</li>
                     </ul>
+
+                    <div class="form-gp">
+                        <label for="content">備註<span class="notice">*</span></label>
+                        <textarea name="content" id="content" rows="6" placeholder="請輸入內容"></textarea>
+                    </div>
 
                     <div class="form-gp choice">
                         <div class="item">
@@ -224,13 +278,26 @@
                             </label>
                         </div>
                     </div>
+
+                    <!-- 圖片驗證碼 -->
+                    <div class="code-gp">
+                        <label for="code">驗證碼<span class="notice">*</span></label>
+                        <div class="text-gp">
+                            <input class="code" type="text" name="code" id="code">
+                            <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                            <a href=""><img class="reform" src="img/redo.svg" alt="重整"></a>
+                        </div>
+                    </div>
+
                     <div class="form-gp">
                         <a href="#" data-toggle="modal" data-target="#modalChangPWD">modal-sample</a>
                     </div>
 
+
                     <div class="btn-tool">
                         <input type="submit" value="送出申請" class="submit">
                     </div>
+
                 </form>
             </div>
 
@@ -240,7 +307,7 @@
         <div class="modal fade modal-template" id="modalChangPWD" tabindex="-1" role="dialog"
             aria-labelledby="modalPrivateLabel" data-backdrop="static" style=" padding-top: 0;">
             <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
-                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -298,6 +365,9 @@
     <!-- bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
 
+    <!-- jQuery 日期選擇器-->
+    <script src="js/jquery-ui.1.10.2.min.js"></script>
+
     <!-- 引入html header&footer -->
     <script>
         $(function () {
@@ -311,6 +381,117 @@
         window.onload = function () {
             document.getElementById('menu1').className += " active";
         }
+    </script>
+
+    <!-- JQ datepicker -->
+    <script>
+        $(document).ready(function () {
+            $(".chinese-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "Rmmdd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+            });
+            $(".western-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "yy-mm-dd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+            });
+        });
+        //將.datepicker改成民國年與西元年小套件同時存在
+        $(function (datepicker) {
+            //先設定預設西元年的datepicker必要功能
+            var old_generateMonthYearHeader = $.datepicker._generateMonthYearHeader;
+            var old_formatDate = $.datepicker.formatDate;
+            var old_parseDate = $.datepicker.parseDate;
+
+            $.extend($.datepicker, {
+                //選擇日期之後的value
+                formatDate: function (format, date, settings) {
+                    var oformatDate = old_formatDate(format, date, settings);
+
+                    if (format == 'Rmmdd') {
+                        var d = date.getDate();
+                        var m = date.getMonth() + 1;
+                        var y = date.getFullYear();
+                        var fm = function (v) {
+                            return (v < 10 ? '0' : '') + v;
+                        };
+
+                        if ((y - 1911) >= 100) { y = y - 1911; } else { y = "0" + String(y - 1911); }
+                        // 日期顯示格式
+                        return (y) + '/' + fm(m) + '/' + fm(d);
+                    }
+                    return oformatDate;
+
+                },
+                //點取已存在日期的parse
+                parseDate: function (format, value, settings) {
+                    var v = new String(value);
+                    var Y, M, D;
+                    if (format == 'Rmmdd') {
+                        if (v.length == 7) {/*1001215*/
+                            Y = v.substring(0, 3) - 0 + 1911;
+                            M = v.substring(3, 5) - 0 - 1;
+                            D = v.substring(5, 7) - 0;
+                            return (new Date(Y, M, D));
+                        } else if (v.length == 6) {/*0981215*/
+
+                            Y = "0" + String(v.substring(0, 2) - 0 + 1911);
+                            M = v.substring(2, 4) - 0 - 1;
+                            D = v.substring(4, 6) - 0;
+                            return (new Date(Y, M, D));
+                        }
+                        return (new Date());
+                    } else {
+                        var oparseDate = old_parseDate.apply(this, [format, value, settings]);
+                        return (oparseDate);
+                    }
+
+                },
+                //改變小工具的年-民國
+                _generateMonthYearHeader: function (inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort) {
+                    var dateFormat = this._get(inst, "dateFormat");
+                    var htmlYearMonth = old_generateMonthYearHeader.apply(this, [inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort]);
+                    if (dateFormat == 'Rmmdd') {
+                        if ($(htmlYearMonth).find(".ui-datepicker-year").length > 0) {
+                            htmlYearMonth = $(htmlYearMonth).find(".ui-datepicker-year").find("option").each(function (i, e) {
+                                if (Number(e.value) - 1911 > 0) $(e).text("民國" + (Number(e.innerText) - 1911) + "年");
+                            }).end().end().get(0).outerHTML;
+                        }
+                    }
+                    return htmlYearMonth;
+                },
+
+            });
+
+            // 中文
+            $.datepicker.regional["zh-TW"] = {
+                monthNames: ["一月", "二月", "三月", "四月", "五月", "六月",
+                    "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                monthNamesShort: ["一月", "二月", "三月", "四月", "五月", "六月",
+                    "七月", "八月", "九月", "十月", "十一月", "十二月"],
+                dayNames: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+                dayNamesShort: ["週日", "週一", "週二", "週三", "週四", "週五", "週六"],
+                dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"],
+                weekHeader: "週",
+                dateFormat: "yyy/mm/dd",
+            };
+            $.datepicker.setDefaults($.datepicker.regional["zh-TW"]);
+
+            return datepicker.regional["zh-TW"];
+
+        });
+
+        // 手機隱藏鍵盤
+        $(".mb-nokeyboard").focus(function () {
+            document.activeElement.blur();
+        });
     </script>
 
 </body>

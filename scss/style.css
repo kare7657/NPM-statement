@@ -2,8 +2,6 @@
 * {
   font-family: "微軟正黑體";
   box-sizing: border-box !important;
-  /* Chrome, Safari, Edge, Opera */
-  /* Firefox */
 }
 * .container {
   max-width: 1440px;
@@ -111,17 +109,17 @@
 * a:hover {
   color: #4A2121;
 }
-* ul:not(.nav, .breadcrumb) {
+* ul:not(.nav, .breadcrumb), * ol {
   padding: 0;
   margin-bottom: 0;
 }
-* ul:not(.nav, .breadcrumb) li:not(.nav-item) {
+* ul:not(.nav, .breadcrumb) li:not(.nav-item), * ol li:not(.nav-item) {
   line-height: 2;
   color: #666666;
   list-style-position: inside;
 }
 @media (max-width: 568px) {
-  * ul:not(.nav, .breadcrumb) li:not(.nav-item) {
+  * ul:not(.nav, .breadcrumb) li:not(.nav-item), * ol li:not(.nav-item) {
     margin-bottom: 12px !important;
   }
 }
@@ -205,10 +203,16 @@
 * input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
+* {
+  /* Chrome, Safari, Edge, Opera */
+}
 * input[type=number]::-webkit-outer-spin-button,
 * input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+* {
+  /* Firefox */
 }
 * input[type=number] {
   -moz-appearance: textfield;
@@ -933,7 +937,6 @@ body {
   padding-right: 0 !important;
   position: relative;
   background-color: #f1eff0;
-  /* 跳到主要內容區塊 */
 }
 @media (max-width: 320px) {
   body {
@@ -1674,9 +1677,9 @@ body form .form-gp .range {
   margin-bottom: 12px;
 }
 body form .form-gp .label-withButton {
+  margin-top: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
 }
 @media (max-width: 568px) {
@@ -1684,14 +1687,16 @@ body form .form-gp .label-withButton {
     width: 100%;
   }
 }
+body form .form-gp .label-withButton h3 {
+  width: initial;
+  margin: 0;
+}
 body form .form-gp .label-withButton label {
   width: initial;
 }
 body form .form-gp .label-withButton button {
-  font-size: 1rem;
-  padding: 2px 8px;
-  margin-left: 12px;
-  margin-bottom: 8px;
+  padding: 4px 12px;
+  margin-left: 20px;
   height: initial;
 }
 @media (max-width: 568px) {
@@ -1712,6 +1717,32 @@ body form .form-gp .label-withButton .download-sample {
 }
 body form .form-gp .label-withButton .download-sample i {
   margin-right: 8px;
+}
+body form .list-gp {
+  margin-bottom: 36px;
+}
+body form .list-gp ol,
+body form .list-gp ul {
+  padding-left: 0;
+}
+body form .list-gp ol li,
+body form .list-gp ul li {
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+body form .list-gp ol li span,
+body form .list-gp ul li span {
+  width: 2em;
+  text-align: center;
+  flex-shrink: 0;
+}
+body form .list-gp ol li input,
+body form .list-gp ul li input {
+  flex: 1;
+  min-width: 0;
 }
 body form .choice .item {
   display: flex;
@@ -1875,8 +1906,9 @@ body form .code-gp {
   width: 100%;
   padding: 0;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 @media (max-width: 1025px) {
   body form .code-gp {
@@ -1899,18 +1931,22 @@ body form .code-gp .text-gp {
 }
 @media (max-width: 568px) {
   body form .code-gp .text-gp {
-    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 body form .code-gp .text-gp .code {
-  width: 40%;
+  width: 30%;
   margin-right: 10px;
   margin-bottom: 0;
 }
 @media (max-width: 568px) {
   body form .code-gp .text-gp .code {
-    width: 100%;
-    margin-bottom: 12px;
+    width: 50%;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 320px) {
+  body form .code-gp .text-gp .code {
     margin-right: 0;
   }
 }
@@ -1928,43 +1964,21 @@ body form .code-gp .text-gp .RP {
 }
 @media (max-width: 568px) {
   body form .code-gp .text-gp .RP {
-    height: 35px;
+    width: 30%;
+    height: unset;
   }
 }
-body form .code-gp .text-gp .reform {
-  margin-right: 12px;
-  height: auto;
-  color: #4A2121;
-  font-weight: bold;
-  padding: 4px 8px;
-  background-color: #FFF9F9;
-}
-@media (max-width: 568px) {
-  body form .code-gp .text-gp .reform {
-    height: 40px;
-    padding: 4px 12px;
+@media (max-width: 320px) {
+  body form .code-gp .text-gp .RP {
+    margin-left: 12px;
   }
 }
-body form .code-gp .text-gp .reform i {
-  margin: 0;
-  font-size: 1.25rem;
+body form .code-gp .text-gp .reform, body form .code-gp .text-gp .btnPlayAudio {
+  margin: 8px;
+  background-color: #BE5555;
 }
-body form .code-gp .text-gp .btnPlayAudio {
-  height: auto;
-  color: #4A2121;
-  font-weight: bold;
-  padding: 4px 8px;
-  background-color: #FFF9F9;
-}
-@media (max-width: 568px) {
-  body form .code-gp .text-gp .btnPlayAudio {
-    height: 40px;
-    padding: 4px 12px;
-  }
-}
-body form .code-gp .text-gp .btnPlayAudio i {
-  margin: 0;
-  font-size: 1.25rem;
+body form .code-gp .text-gp .reform i, body form .code-gp .text-gp .btnPlayAudio i {
+  margin-right: 0;
 }
 body form .finished-file-list {
   display: flex;
@@ -2365,6 +2379,109 @@ body .collapse-gp .content li {
   body .collapse-gp .content li {
     font-size: 1rem;
   }
+}
+body {
+  /* datepicker日期 */
+}
+body .ui-datepicker {
+  font-size: 1rem;
+  font-family: "sans-serif", "微軟正黑體";
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+body .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+  vertical-align: middle;
+}
+body .ui-widget-header {
+  border: none;
+  background: #fff;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+body .ui-widget-header select {
+  border: 1px solid #eee;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 4px;
+  font-size: 0.875rem !important;
+}
+body .ui-datepicker-title {
+  display: flex;
+  flex-direction: row-reverse;
+}
+body .ui-datepicker select.ui-datepicker-year {
+  width: 60%;
+  margin-right: 10px;
+}
+body .ui-datepicker select.ui-datepicker-month {
+  width: calc(40% - 10px);
+}
+body .ui-datepicker-prev.ui-corner-all,
+body .ui-datepicker-next.ui-corner-all {
+  height: 35px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 0;
+  color: #555555;
+}
+body .ui-datepicker-prev.ui-corner-all:hover,
+body .ui-datepicker-next.ui-corner-all:hover {
+  border: none;
+  background-color: #e6f4ff;
+}
+body .ui-datepicker-prev::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f053";
+  font-weight: bold;
+  width: 12px;
+  line-height: 8px;
+  position: absolute;
+  left: calc(50% - 6px);
+  top: calc(50% - 6px);
+}
+body .ui-datepicker-next::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  font-weight: bold;
+  width: 12px;
+  line-height: 8px;
+  position: absolute;
+  left: calc(50% - 6px);
+  top: calc(50% - 6px);
+}
+body .ui-state-default,
+body .ui-widget-content .ui-state-default,
+body .ui-widget-header .ui-state-default {
+  background: #fff;
+  border: none;
+}
+body .ui-state-default:hover {
+  background-color: #f1f8fe;
+}
+body .ui-datepicker-calendar thead {
+  background-color: #f4f4f4;
+  border: none;
+}
+body .ui-datepicker-calendar th {
+  padding: 5px 0;
+}
+body .ui-datepicker .highlight a {
+  cursor: pointer !important;
+}
+body .ui-state-highlight {
+  background-color: #ffffe6 !important;
+  border: solid 1px #e0e19f !important;
+}
+body td.highlight a {
+  background-color: #e6f4ff !important;
+  border: solid 1px #a1d1f5 !important;
+}
+body .ui-datepicker td a {
+  text-align: center;
+  cursor: default !important;
+}
+body {
+  /* 跳到主要內容區塊 */
 }
 body .for_accessibility .go-main {
   position: absolute;
@@ -2848,6 +2965,18 @@ body main .content-apply .card .form-view .view-gp h5 {
     font-size: 0.875rem;
   }
 }
+body main .content-apply .card .form-view .view-gp ul ul {
+  padding-left: 16px;
+}
+body main .content-apply .card .form-view .view-gp .state {
+  margin-top: 12px;
+  background-color: #FFF9F9;
+  padding: 4px 8px;
+  color: #4A2121;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid #dcdddd;
+}
 body main .content-apply .card .form-view .view-link h5 {
   width: 100%;
   margin-bottom: 4px;
@@ -2876,7 +3005,7 @@ body main .content-apply .card .form-view hr {
   }
 }
 body main .content-apply .card .form-view h3 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
 }
 body main .content-apply .card .form-view table.reply {
